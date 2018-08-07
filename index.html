@@ -12,9 +12,8 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
 
-
+      <h1>Bucket List</h1>
 
 <!-- BEGIN SIGN UP -->
     <form id="sign-up" class="border">
@@ -27,7 +26,18 @@
       </fieldset>
     </form>
 <!-- END SIGN UP -->
-
+      
+<!-- BEGIN SIGN IN -->
+      <form id="sign-in" class="border left">
+        <fieldset>
+            <legend>Sign In</legend>
+            <p id="sign-in-message"></p>
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" value="Sign In">
+        </fieldset>
+    </form>
+ <!-- END SIGN IN - TLE-->
       
             <div class="hidden" id="change-password-form">
         <form>
@@ -36,6 +46,5 @@
           <input type="submit" value="Change Password">
         </form>
       </div>
-
     </body>
 </html>
