@@ -14,6 +14,8 @@
     <body>
       <h1>Browser Template</h1>
 
+
+
 <!-- BEGIN SIGN UP -->
     <form id="sign-up" class="border">
       <fieldset>
@@ -25,6 +27,15 @@
       </fieldset>
     </form>
 <!-- END SIGN UP -->
+
+      
+            <div class="hidden" id="change-password-form">
+        <form>
+          <input type="password" name="passwords[old]" placeholder="Current Password" required>
+          <input type="password" name="passwords[new]" placeholder="New Password" required>
+          <input type="submit" value="Change Password">
+        </form>
+      </div>
 
     </body>
 </html>
