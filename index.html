@@ -13,7 +13,23 @@
     </head>
     <body>
       <h1>Browser Template</h1>
-      <div class="hidden" id="change-password-form">
+
+
+
+<!-- BEGIN SIGN UP -->
+    <form id="sign-up" class="border">
+      <fieldset>
+        <legend>Sign up!</legend>
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input type="submit" value="Sign up!">
+      </fieldset>
+    </form>
+<!-- END SIGN UP -->
+
+      
+            <div class="hidden" id="change-password-form">
         <form>
           <input type="password" name="passwords[old]" placeholder="Current Password" required>
           <input type="password" name="passwords[new]" placeholder="New Password" required>
