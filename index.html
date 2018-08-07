@@ -12,8 +12,45 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-      <div class="hidden" id="change-password-form">
+      <h1>Bucket List</h1>
+      <!-- BEGIN SIGN OUT -->
+      <form id="sign-out" class="border">
+        <fieldset>
+            <legend>Sign out</legend>
+            <p id="sign-out-message"></p>
+            <input type="submit" value="Sign Out">
+        </fieldset>
+    </form>
+    <!-- END SIGN OUT - TLE -->
+
+
+
+
+<!-- BEGIN SIGN UP -->
+    <form id="sign-up" class="border">
+      <fieldset>
+        <legend>Sign up!</legend>
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input type="submit" value="Sign up!">
+      </fieldset>
+    </form>
+<!-- END SIGN UP -->
+      
+<!-- BEGIN SIGN IN -->
+      <form id="sign-in" class="border left">
+        <fieldset>
+            <legend>Sign In</legend>
+            <p id="sign-in-message"></p>
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" value="Sign In">
+        </fieldset>
+    </form>
+ <!-- END SIGN IN - TLE-->
+      
+            <div class="hidden" id="change-password-form">
         <form>
           <input type="password" name="passwords[old]" placeholder="Current Password" required>
           <input type="password" name="passwords[new]" placeholder="New Password" required>
@@ -24,5 +61,19 @@
       <form id="search-bucket-list" >
         <input type="submit" name="list[id]" value="Search Bucket List ">
       </form>
+<!-- Start Create Item Form -->
+      <form id='create-item'>
+        <label>Item Name</label>
+        <input type='text' name='item[item_name]'>
+        <label>Description</label>
+        <input type='text' name='item[description]'>
+        <!-- TODO: this will need to be refactored once we've gotten further with our tables and UI. 
+          The name attribute may need to change, and the input type may change to "select" for a drop-down. -->
+        <label>Location</label>
+        <input type='text' name='location[name]'>
+        <button type='submit'> Submit </button>
+      </form>
+<!-- End Create Item Form-->
+
     </body>
 </html>
