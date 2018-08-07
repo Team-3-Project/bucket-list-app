@@ -13,54 +13,56 @@
     </head>
     <body>
       <h1>Bucket List</h1>
-      <!-- BEGIN SIGN OUT -->
-      <form id="sign-out" class="border">
-        <fieldset>
-            <legend>Sign out</legend>
-            <p id="sign-out-message"></p>
-            <input type="submit" value="Sign Out">
-        </fieldset>
-    </form>
-    <!-- END SIGN OUT - TLE -->
-
-
-
 
 <!-- BEGIN SIGN UP -->
-    <form id="sign-up" class="border">
-      <fieldset>
-        <legend>Sign up!</legend>
-        <input type="text" name="credentials[email]" placeholder="Email">
-        <input type="password" name="credentials[password]" placeholder="Password">
-        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-        <input type="submit" value="Sign up!">
-      </fieldset>
-    </form>
-<!-- END SIGN UP -->
-      
-<!-- BEGIN SIGN IN -->
-      <form id="sign-in" class="border left">
+      <form id="sign-up">
         <fieldset>
-            <legend>Sign In</legend>
-            <p id="sign-in-message"></p>
-            <input type="text" name="credentials[email]" placeholder="Email">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="submit" value="Sign In">
+          <legend>Sign up!</legend>
+          <input type="text" name="credentials[email]" value="" placeholder="Email">
+          <input type="password" name="credentials[password]" value="" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password">
+          <input type="submit" name="submit" value="Create New Account">
         </fieldset>
-    </form>
- <!-- END SIGN IN - TLE-->
-      
-            <div class="hidden" id="change-password-form">
-        <form>
-          <input type="password" name="passwords[old]" placeholder="Current Password" required>
-          <input type="password" name="passwords[new]" placeholder="New Password" required>
-          <input type="submit" value="Change Password">
-        </form>
-      </div>
+      </form>
+<!-- END SIGN UP -->
+
+<!-- BEGIN SIGN IN -->
+      <form id="sign-in">
+        <fieldset>
+          <legend>Sign In</legend>
+          <p id="sign-in-message"></p>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" name="submit" value="Sign In">
+        </fieldset>
+      </form>
+ <!-- END SIGN IN -->
+
+<!-- BEGIN SIGN OUT -->
+      <form id="sign-out">
+        <fieldset>
+          <legend>Sign out</legend>
+          <p id="sign-out-message"></p>
+          <input type="submit" value="Sign Out">
+        </fieldset>
+      </form>
+<!-- END SIGN OUT -->
+
+<!-- BEGIN CHANGE PASSWORD -->
+      <form id="change-password">
+        <fieldset>
+          <legend>Change Password</legend>
+          <input type="password" name="passwords[old]" placeholder="Current Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" name="submit" value="Change Password">
+        </fieldset>
+      </form>
+<!-- END CHANGE PASSWORD -->
 
       <form id="search-bucket-list" >
         <input type="submit" name="list[id]" value="Search Bucket List ">
       </form>
+
 <!-- Start Create Item Form -->
       <form id='create-item'>
         <label>Item Name</label>
