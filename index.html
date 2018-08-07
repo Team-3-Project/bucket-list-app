@@ -12,7 +12,21 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+
       <h1>Bucket List</h1>
+
+<!-- BEGIN SIGN UP -->
+    <form id="sign-up" class="border">
+      <fieldset>
+        <legend>Sign up!</legend>
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input type="submit" value="Sign up!">
+      </fieldset>
+    </form>
+<!-- END SIGN UP -->
+      
 <!-- BEGIN SIGN IN -->
       <form id="sign-in" class="border left">
         <fieldset>
@@ -23,6 +37,14 @@
             <input type="submit" value="Sign In">
         </fieldset>
     </form>
-    <!-- END SIGN IN - TLE-->
+ <!-- END SIGN IN - TLE-->
+      
+            <div class="hidden" id="change-password-form">
+        <form>
+          <input type="password" name="passwords[old]" placeholder="Current Password" required>
+          <input type="password" name="passwords[new]" placeholder="New Password" required>
+          <input type="submit" value="Change Password">
+        </form>
+      </div>
     </body>
 </html>
