@@ -13,8 +13,6 @@
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 
-
-
 <body>
 
 
@@ -58,6 +56,43 @@
       <input type="submit" name="submit" class="btn btn-primary" value="Sign In">
 
     </div>
+
+  <style>
+    #map {
+      height: 100%;
+    }
+
+  </style>
+  <!-- BEGIN GOOGLE PLACES TESTING -->
+  <div id="map">Map here</div>
+  <!-- END GOOGLE PLACES TESTING -->
+
+      <form id="search-bucket-list" >
+        <input type="submit" name="list[id]" value="Search Bucket List ">
+      </form>
+
+<!-- Start Create Item Form -->
+      <form id='create-item'>
+        <label>Item Name</label>
+        <input type='text' name='item[item_name]'>
+        <label>Description</label>
+        <input type='text' name='item[description]'>
+        <!-- TODO: this will need to be refactored once we've gotten further with our tables and UI.
+          The name attribute may need to change, and the input type may change to "select" for a drop-down. -->
+        <label>Location</label>
+        <input type='text' name='location[name]'>
+        <button type='submit'> Submit </button>
+      </form>
+<!-- End Create Item Form-->
+<!-- Start Update Item Form -->
+<form id='update-item'>
+  <label>Item Name</label>
+  <input type='text' name='[item_name]'>
+  <label>Description</label>
+  <input type='text' name='item[description]'>
+  <label>Location</label>
+  <input type='text' name='location[name]'>
+  <button type='submit'> Submit </button>
   </form>
   <!-- END SIGN IN -->
 
@@ -180,5 +215,4 @@
   </div>
   <!-- end modal -->
 </body>
-
 </html>
