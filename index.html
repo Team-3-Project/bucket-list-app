@@ -1,81 +1,97 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Bucket List</h1>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-<!-- BEGIN SIGN UP -->
-      <form id="sign-up">
-        <fieldset>
-          <legend>Sign up!</legend>
-          <input type="text" name="credentials[email]" value="" placeholder="Email">
-          <input type="password" name="credentials[password]" value="" placeholder="Password">
-          <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password">
-          <input type="submit" name="submit" value="Create New Account">
-        </fieldset>
-      </form>
-<!-- END SIGN UP -->
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-<!-- BEGIN SIGN IN -->
-      <form id="sign-in">
-        <fieldset>
-          <legend>Sign In</legend>
-          <p id="sign-in-message"></p>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="submit" name="submit" value="Sign In">
-        </fieldset>
-      </form>
- <!-- END SIGN IN -->
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Bucket List</h1>
+        <p class="lead">Where do you want to go?</p>
+        <hr class="my-4">
+        <p>Enter in the name of what you want to do, a brief description, and a location</p>
+</div>
 
-<!-- BEGIN SIGN OUT -->
-      <form id="sign-out">
-        <fieldset>
-          <legend>Sign out</legend>
-          <p id="sign-out-message"></p>
-          <input type="submit" value="Sign Out">
-        </fieldset>
-      </form>
-<!-- END SIGN OUT -->
+  <!-- BEGIN SIGN UP -->
+  <form id="sign-up">
+    <h4 class="display-4">Make an account</h4>
 
-<!-- BEGIN CHANGE PASSWORD -->
-      <form id="change-password">
-        <fieldset>
-          <legend>Change Password</legend>
-          <input type="password" name="passwords[old]" placeholder="Current Password">
-          <input type="password" name="passwords[new]" placeholder="New Password">
-          <input type="submit" name="submit" value="Change Password">
-        </fieldset>
-      </form>
-<!-- END CHANGE PASSWORD -->
+    <div class="form-group">
+      <label for="exampleInputEmail1">Sign Up</label>
+      <input type="email" name="credentials[email]" value="" class="form-control w-25 p-3" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter email">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="credentials[password]" value="" class="form-control" id="exampleInputPassword1" placeholder="Password">
 
-      <form id="search-bucket-list" >
-        <input type="submit" name="list[id]" value="Search Bucket List ">
-      </form>
+      <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password" value="" class="form-control"
+        id="exampleInputPassword2">
+      <input type="submit" name="submit" class="btn btn-primary" value="Create New Account">
+    </div>
+  </form>
+  <!-- END SIGN UP -->
 
-<!-- Start Create Item Form -->
-      <form id='create-item'>
-        <label>Item Name</label>
-        <input type='text' name='item[item_name]'>
-        <label>Description</label>
-        <input type='text' name='item[description]'>
-        <!-- TODO: this will need to be refactored once we've gotten further with our tables and UI. 
+  <!-- BEGIN SIGN IN -->
+  <form id="sign-in">
+
+    <h4 class="display-4">Sign In</h4>
+    <div class="form-group">
+      <label for="logInEmail">Sign In</label>
+      <input type="email" name="credentials[email]" value="" class="form-control" id="logInEmail" aria-describedby="emailHelp"
+        placeholder="Enter email">
+      <label for="logInPassword">Password</label>
+      <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="Password">
+      <input type="submit" name="submit" class="btn btn-primary" value="Sign In">
+
+    </div>
+  </form>
+  <!-- END SIGN IN -->
+
+  <!-- BEGIN SIGN OUT -->
+  <form id="sign-out">
+      <h4 class="display-4">Sign Out</h4>
+      <p id="sign-out-message"></p>
+      <input type="submit" value="Sign Out" class="btn btn-primary">
+  </form>
+  <!-- END SIGN OUT -->
+
+  <!-- BEGIN CHANGE PASSWORD -->
+  <form id="change-password">
+        <h4 class="display-4">Change Password</h4>
+        <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
+      <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
+      <input type="submit" name="submit" value="Change Password" class="btn btn-primary">
+  </form>
+  <!-- END CHANGE PASSWORD -->
+
+  <form id="search-bucket-list">
+    <input type="submit" name="list[id]" value="Search Bucket List" class="btn btn-primary">
+  </form>
+
+  <!-- Start Create Item Form -->
+  <form id='create-item'>
+      <h4 class="display-4">New Item</h4>
+
+    <label>Item Name</label>
+    <input type='text' name='item[item_name]' class="form-control" placeholder="name">
+    <label>Description</label>
+    <input type='text' name='item[description]' class="form-control" placeholder="Describe your adventure">
+    <!-- TODO: this will need to be refactored once we've gotten further with our tables and UI.
           The name attribute may need to change, and the input type may change to "select" for a drop-down. -->
-        <label>Location</label>
-        <input type='text' name='location[name]'>
-        <button type='submit'> Submit </button>
-      </form>
-<!-- End Create Item Form-->
+    <label>Location</label>
+    <input type='text' name='location[name]' class="form-control" placeholder="Where do you want to go?">
+    <button type='submit'class="btn btn-primary"> Submit </button>
+  </form>
+  <!-- End Create Item Form-->
 
-    </body>
+</body>
+
 </html>
