@@ -8,4 +8,12 @@
 require('./auth/auth')
 $(() => {
   // your JS code goes here
+
+  // click handler for testing bootstrap manipulation, can move later
+  $("#markAsCompleted").click(function(){
+    event.preventDefault()
+    $('#cardTest').addClass("bg-success text-white")
+  })
+
+
 })
