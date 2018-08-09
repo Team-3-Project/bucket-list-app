@@ -99,7 +99,7 @@
   <!-- End Create Item Form-->
 
   <!-- carousel for displaying images -->
-  <div id="carouselExampleControls" class="carousel slide w-50" data-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide w-50 mx-auto" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
@@ -143,75 +143,31 @@
 
 
   <!-- container for bootstrap positoning  -->
-  <div class="container-fluid text-center">
-    <div class="row">
-      <div class="col">
-        FIRST HALF
-      </div>
-      <div class="col">
-        <div class="card text-center" style="width: 18rem;" id="cardTest">
-          <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-          <div class="card-body">
-            <h5 class="card-title">Bucket List Item</h5>
-            <h6 class="card-title">Location</h6>
-            <p class="card-text">This is where the bucket list description goes</p>
-            <a href="#" class="btn btn-primary" id="markAsCompleted">Mark As Completed</a>
-            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>
 
-          </div>
+
+  <!-- container end -->
+
+  <!-- Modals section  -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Update Your Item</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-      </div>
-      <div class="col">
-          <div class="card text-center" style="width: 18rem;" id="cardTest">
-              <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-              <div class="card-body">
-                <h5 class="card-title">Bucket List Item</h5>
-                <h6 class="card-title">Location</h6>
-                <p class="card-text">This is where the bucket list description goes</p>
-                <a href="#" class="btn btn-primary" id="markAsCompleted">Mark As Completed</a>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>
-
-              </div>
-            </div>
-      </div>
-      <div class="col">
-          <div class="card text-center" style="width: 18rem;" id="cardTest">
-              <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-              <div class="card-body">
-                <h5 class="card-title">Bucket List Item</h5>
-                <h6 class="card-title">Location</h6>
-                <p class="card-text">This is where the bucket list description goes</p>
-                <a href="#" class="btn btn-primary" id="markAsCompleted">Mark As Completed</a>
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>
-
-              </div>
-            </div>
+        <div class="modal-body">
+          This is where the update form will go
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Remove Card</button>
+        </div>
       </div>
     </div>
   </div>
-  <!-- container end -->
-
-    <!-- Modals section  -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Update Your Item</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              This is where the update form will go
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Remove Card</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end modal -->
+  <!-- end modal -->
 </body>
 
 </html>
