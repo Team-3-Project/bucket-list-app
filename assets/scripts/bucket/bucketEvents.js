@@ -85,7 +85,7 @@ const onClearBooks = (event) => {
 
 const onDeleteBook = (event) => {
   event.preventDefault()
-  const bookId = $(event.target).closest('ul').attr('data-id')
+  const bookId = $(event.target).closest('div').attr('data-id')
   bucketApi.deleteBook(bookId)
     .then(() => onGetBooks(event))
     .catch(bucketUi.failure)
@@ -94,7 +94,7 @@ const onDeleteBook = (event) => {
 const addHandlers = () => {
   $('#getBooksButton').on('click', onGetBooks)
   $('#clearBooksButton').on('click', onClearBooks)
-  $('.content').on('click', 'button', onDeleteBook)
+  $('.content').on('click', '.btn-danger', onDeleteBook)
 }
 // end seciton handebars demo
 

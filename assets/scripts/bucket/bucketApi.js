@@ -59,7 +59,7 @@ const createItem = function (data) {
   })
 }
 
-//handlebars demo
+// handlebars demo
 const getBooks = function () {
   return $.ajax({
     url: config.apiUrl + '/books'
