@@ -1,2 +1,14 @@
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap/scss/bootstrap';
+
+form {
+  margin-top: ($spacer * .75) !important;
+}
+
+input{
+  width: 25% !important;
+}
+
+.row{
+  background-color: #E9ECEF !important;
+}
