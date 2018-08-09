@@ -91,26 +91,11 @@
     <input type='text' name='item[item_name]' class="form-control" placeholder="name">
     <label>Description</label>
     <input type='text' name='item[description]' class="form-control" id="descriptionField" rows="3" placeholder="Describe your adventure">
-    <!-- TODO: this will need to be refactored once we've gotten further with our tables and UI.
-
     <label>Location</label>
     <input type='text' name='location[name]' class="form-control" placeholder="Where do you want to go?">
     <button type='submit' class="btn btn-primary"> Submit </button>
   </form>
   <!-- End Create Item Form-->
-
-  <!-- Update Item Form -->
-  <form id='update-item'>
-      <label>Item Name</label>
-      <input type='text' name='[item_name]'>
-      <label>Description</label>
-      <input type='text' name='item[description]'>
-      <label>Location</label>
-      <input type='text' name='location[name]'>
-      <button type='submit'> Submit </button>
-      </form>
-  <!-- End Update Item Form-->
-
 
   <!-- carousel for displaying images -->
   <div id="carouselExampleControls" class="carousel slide w-50 mx-auto" data-ride="carousel">
@@ -172,7 +157,19 @@
           </button>
         </div>
         <div class="modal-body">
-          This is where the update form will go
+          <!-- Update Item Form -->
+          <form id='update-item'>
+            <h4 class="display-4">Update Item</h4>
+
+            <label>Item Name</label>
+            <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
+            <label>Description</label>
+            <input type='text' name='item[description]' class="form-control" placeholder="Description">
+            <label>Location</label>
+            <input type='text' name='location[name]' class="form-control" placeholder="Location">
+            <button type='submit'> Submit </button>
+          </form>
+          <!-- End Update Item Form-->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
