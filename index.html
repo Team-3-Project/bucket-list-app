@@ -57,162 +57,138 @@
 
     </div>
 
-  <style>
-    #map {
-      height: 100%;
-    }
+    <form id="search-bucket-list">
+      <input type="submit" name="list[id]" value="Search Bucket List ">
+    </form>
 
-  </style>
-  <!-- BEGIN GOOGLE PLACES TESTING -->
-  <div id="map">Map here</div>
-  <!-- END GOOGLE PLACES TESTING -->
 
-      <form id="search-bucket-list" >
-        <input type="submit" name="list[id]" value="Search Bucket List ">
+    <!-- BEGIN SIGN OUT -->
+    <form id="sign-out">
+      <h4 class="display-4">Sign Out</h4>
+      <p id="sign-out-message"></p>
+      <input type="submit" value="Sign Out" class="btn btn-primary">
+    </form>
+    <!-- END SIGN OUT -->
+
+    <!-- BEGIN CHANGE PASSWORD -->
+    <form id="change-password">
+      <h4 class="display-4">Change Password</h4>
+      <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
+      <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
+      <input type="submit" name="submit" value="Change Password" class="btn btn-primary">
+    </form>
+    <!-- END CHANGE PASSWORD -->
+
+    <form id="search-bucket-list">
+      <input type="submit" name="list[id]" value="Search Bucket List" class="btn btn-primary">
+    </form>
+
+    <!-- Start Create Item Form -->
+    <form id='create-item'>
+      <h4 class="display-4">New Item</h4>
+
+      <label>Item Name</label>
+      <input type='text' name='item[item_name]' class="form-control" placeholder="name">
+      <label>Description</label>
+      <input type='text' name='item[description]' class="form-control" id="descriptionField" rows="3" placeholder="Describe your adventure">
+      <label>Location</label>
+      <input type='text' name='location[name]' class="form-control" placeholder="Where do you want to go?">
+      <button type='submit' class="btn btn-primary"> Submit </button>
+    </form>
+    <!-- End Create Item Form-->
+
+    <!-- carousel for displaying images -->
+    <div id="carouselExampleControls" class="carousel slide w-50 mx-auto" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
+            alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="http://thewowstyle.com/wp-content/uploads/2015/02/landscape-photography-image-free-wallpaper.jpg"
+            alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://www.skiesholiday.com/wp-content/uploads/2017/07/HUA-HIN.jpg" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+
+
+    <!-- cards for bucket list items -->
+
+    <div class="card" style="width: 18rem;" id="cardTest">
+      <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+      <div class="card-body">
+        <h5 class="card-title">Bucket List Item</h5>
+        <h6 class="card-title">Location</h6>
+        <p class="card-text">This is where the bucket list description goes</p>
+        <a href="#" class="btn btn-primary" id="markAsCompleted">Mark As Completed</a>
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>
+
+      </div>
+    </div>
+
+
+
+    <!-- container for bootstrap positoning  -->
+
+
+    <!-- container end -->
+
+    <!-- Modals section  -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Update Your Item</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Update Item Form -->
+            <form id='update-item'>
+              <h4 class="display-4">Update Item</h4>
+
+              <label>Item Name</label>
+              <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
+              <label>Description</label>
+              <input type='text' name='item[description]' class="form-control" placeholder="Description">
+              <label>Location</label>
+              <input type='text' name='location[name]' class="form-control" placeholder="Location">
+              <button type='submit'> Submit </button>
+            </form>
+            <!-- End Update Item Form-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Remove Card</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- google maps -->
+    <div class="form-group">
+      <form id="getLocation">
+        <input type="text" name="location[search]" placeholder="Where to go" class="form-control">
+        <input type="submit" name="submit" class="btn btn-primary" value="Find">
       </form>
-
-<!-- Start Create Item Form -->
-      <form id='create-item'>
-        <label>Item Name</label>
-        <input type='text' name='item[item_name]'>
-        <label>Description</label>
-        <input type='text' name='item[description]'>
-        <!-- TODO: this will need to be refactored once we've gotten further with our tables and UI.
-          The name attribute may need to change, and the input type may change to "select" for a drop-down. -->
-        <label>Location</label>
-        <input type='text' name='location[name]'>
-        <button type='submit'> Submit </button>
-      </form>
-<!-- End Create Item Form-->
-<!-- Start Update Item Form -->
-<form id='update-item'>
-  <label>Item Name</label>
-  <input type='text' name='[item_name]'>
-  <label>Description</label>
-  <input type='text' name='item[description]'>
-  <label>Location</label>
-  <input type='text' name='location[name]'>
-  <button type='submit'> Submit </button>
-  </form>
-  <!-- END SIGN IN -->
-
-
-  <!-- BEGIN SIGN OUT -->
-  <form id="sign-out">
-    <h4 class="display-4">Sign Out</h4>
-    <p id="sign-out-message"></p>
-    <input type="submit" value="Sign Out" class="btn btn-primary">
-  </form>
-  <!-- END SIGN OUT -->
-
-  <!-- BEGIN CHANGE PASSWORD -->
-  <form id="change-password">
-    <h4 class="display-4">Change Password</h4>
-    <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
-    <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
-    <input type="submit" name="submit" value="Change Password" class="btn btn-primary">
-  </form>
-  <!-- END CHANGE PASSWORD -->
-
-  <form id="search-bucket-list">
-    <input type="submit" name="list[id]" value="Search Bucket List" class="btn btn-primary">
-  </form>
-
-  <!-- Start Create Item Form -->
-  <form id='create-item'>
-    <h4 class="display-4">New Item</h4>
-
-    <label>Item Name</label>
-    <input type='text' name='item[item_name]' class="form-control" placeholder="name">
-    <label>Description</label>
-    <input type='text' name='item[description]' class="form-control" id="descriptionField" rows="3" placeholder="Describe your adventure">
-    <label>Location</label>
-    <input type='text' name='location[name]' class="form-control" placeholder="Where do you want to go?">
-    <button type='submit' class="btn btn-primary"> Submit </button>
-  </form>
-  <!-- End Create Item Form-->
-
-  <!-- carousel for displaying images -->
-  <div id="carouselExampleControls" class="carousel slide w-50 mx-auto" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
-          alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="http://thewowstyle.com/wp-content/uploads/2015/02/landscape-photography-image-free-wallpaper.jpg"
-          alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://www.skiesholiday.com/wp-content/uploads/2017/07/HUA-HIN.jpg" alt="Third slide">
-      </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+    <div id="map"></div>
 
-
-
-
-  <!-- cards for bucket list items -->
-
-  <div class="card" style="width: 18rem;" id="cardTest">
-    <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-    <div class="card-body">
-      <h5 class="card-title">Bucket List Item</h5>
-      <h6 class="card-title">Location</h6>
-      <p class="card-text">This is where the bucket list description goes</p>
-      <a href="#" class="btn btn-primary" id="markAsCompleted">Mark As Completed</a>
-      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>
-
-    </div>
-  </div>
-
-
-
-  <!-- container for bootstrap positoning  -->
-
-
-  <!-- container end -->
-
-  <!-- Modals section  -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Update Your Item</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <!-- Update Item Form -->
-          <form id='update-item'>
-            <h4 class="display-4">Update Item</h4>
-
-            <label>Item Name</label>
-            <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
-            <label>Description</label>
-            <input type='text' name='item[description]' class="form-control" placeholder="Description">
-            <label>Location</label>
-            <input type='text' name='location[name]' class="form-control" placeholder="Location">
-            <button type='submit'> Submit </button>
-          </form>
-          <!-- End Update Item Form-->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Remove Card</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end modal -->
 </body>
+
 </html>
