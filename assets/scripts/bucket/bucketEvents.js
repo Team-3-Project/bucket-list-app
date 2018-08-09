@@ -50,10 +50,15 @@ const onCreateItem = function (event) {
     event.preventDefault()
     // could put some input validation here if we want
     // message the user if validation fails
-
+const data = getFormFields(this)
     // make API call
+    bucketApi.createItem(data)
     // if API call is successful, call a success function in UI
+    .then(() => console.log(data))
+    .then(() => {debugger})
     // if API call fails, call an error function in UI
+    .catch(() => console.log("error"))
+    
 }
 
 
@@ -64,8 +69,8 @@ const addHandlers = () => {
     // $(' ').on(' ', onGetItems)
     // $(' ').on(' ', onShowItem)
     // $(' ').on(' ', onDeleteItem)
-    // $(' ').on(' ', onCreateItem)
     // $(' ').on(' ', onUpdateItem)
+    $('#create-item').on('submit', onCreateItem)
 }
 
 module.exports = {
