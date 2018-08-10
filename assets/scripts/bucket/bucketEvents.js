@@ -35,15 +35,7 @@ const onDeleteItem = (event) => {
 }
 
 
-const onUpdateItem = function (event) {
-  event.preventDefault()
-  // could put some input validation here if we want
-  // message the user if validation fails
 
-  // make API call
-  // if API call is successful, call a success function in UI
-  // if API call fails, call an error function in UI
-}
 
 
 const onCreateItem = function (event) {
@@ -91,6 +83,16 @@ const onDeleteBook = (event) => {
     .catch(bucketUi.failure)
 }
 
+const onUpdateItem = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log('logging update')
+  console.log(data)
+  // bucketApi.updateItem(data)
+  // .then(bucketUi.onUpdateItemSuccess)
+  // .catch(bucketUi.onError)
+  }
+
 const onViewBook = (event) => {
   console.log('hi')
   event.preventDefault()
@@ -104,6 +106,7 @@ const addHandlers = () => {
   $('#getBooksButton').on('click', onGetBooks)
   $('#clearBooksButton').on('click', onClearBooks)
   $('.content').on('click', '.btn-danger', onDeleteBook)
+  $('.content').on('click', '.btn-secondary', onUpdateItem)
   // $('.content').on('click', '.btn-primary', onViewBook)
 }
 // end seciton handebars demo
