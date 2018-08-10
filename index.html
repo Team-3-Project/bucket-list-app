@@ -40,7 +40,7 @@
 
       <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password" value="" class="form-control"
         id="exampleInputPassword2">
-      <input type="submit" name="submit" class="btn btn-primary" value="Create New Account">
+      <input type="submit" name="submit" class="btn btn-primary" >
     </div>
   </form>
   <!-- END SIGN UP -->
@@ -55,7 +55,7 @@
         placeholder="Enter email">
       <label for="logInPassword">Password</label>
       <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="Password">
-      <input type="submit" name="submit" class="btn btn-primary" value="Sign In">
+      <input type="submit" name="submit" class="btn btn-primary">
 
     </div>
   </form>
@@ -66,7 +66,7 @@
   <form id="sign-out">
     <h4 class="display-4">Sign Out</h4>
     <p id="sign-out-message"></p>
-    <input type="submit" value="Sign Out" class="btn btn-primary">
+    <input type="submit" class="btn btn-primary">
   </form>
   <!-- END SIGN OUT -->
 
@@ -75,12 +75,12 @@
     <h4 class="display-4">Change Password</h4>
     <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
     <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
-    <input type="submit" name="submit" value="Change Password" class="btn btn-primary">
+    <input type="submit" name="submit" class="btn btn-primary">
   </form>
   <!-- END CHANGE PASSWORD -->
 
   <form id="search-bucket-list">
-    <input type="submit" name="list[id]" value="Search Bucket List" class="btn btn-primary">
+    <input type="submit" name="list[id]" class="btn btn-primary">
   </form>
 
   <!-- Start Create Item Form -->
@@ -92,7 +92,7 @@
     <label>Description</label>
     <input type='text' name='item[description]' class="form-control" id="descriptionField" rows="3" placeholder="Describe your adventure">
     <label>Location</label>
-    <input type='text' name='location[name]' class="form-control" placeholder="Where do you want to go?">
+    <select name="Locations" id="locationDropdown"></select>
     <button type='submit' class="btn btn-primary"> Submit </button>
   </form>
   <!-- End Create Item Form-->

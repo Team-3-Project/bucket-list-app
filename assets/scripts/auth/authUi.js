@@ -20,6 +20,7 @@ const onSignUpFailure = function() {
 
 const onSignInSuccess = function(data) {
     store.user = data.user
+    console.log(store.user.token)
     $('#sign-in-message').text('Signed in successfully.')
     $('#sign-in-message').css('background-color', 'green')
 }

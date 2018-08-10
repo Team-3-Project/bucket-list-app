@@ -49,9 +49,20 @@ const onCreateItem = function (event) {
     const data = getFormFields(event.target)
     // could put some input validation here if we want
     // message the user if validation fails
-    bucketApi.createItem(data)
+
+    //bucketApi.createItem(data)
         // .then(bucketUi.onCreateItemSuccess)
         // .catch(bucketUi.onError)
+
+const data = getFormFields(this)
+    // make API call
+    bucketApi.createItem(data)
+    // if API call is successful, call a success function in UI
+    .then(() => console.log(data))
+    .then(() => {debugger})
+    // if API call fails, call an error function in UI
+    .catch(() => console.log("error"))
+
 }
 
 
@@ -63,7 +74,8 @@ const addHandlers = () => {
     // $(' ').on(' ', onShowItem)
     // $(' ').on(' ', onDeleteItem)
     // $(' ').on(' ', onUpdateItem)
-    // $(' ').on(' ', onCreateItem)
+    $('#create-item').on('submit', onCreateItem)
+
 }
 
 module.exports = {
