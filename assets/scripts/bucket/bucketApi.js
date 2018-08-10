@@ -44,6 +44,7 @@ const updateItem = function (data) {
 }
 
 const createItem = function (data) {
+  debugger
   return $.ajax({
     url: config.apiUrl + '/bl-items',
     method: 'POST',

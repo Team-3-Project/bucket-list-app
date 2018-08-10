@@ -31,32 +31,16 @@ const onDeleteItem = function (event) {
   //   .catch(bucketUi.onError)
 }
 
-
-// const onUpdateItem = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   // could put some input validation here if we want
-//    // message the user if validation fails
-//    bucketApi.updateItem(data)
-//        // .then(bucketUi.onUpdateItemSuccess)
-//        // .catch(bucketUi.onError)
-//    }
-
-
 const onCreateItem = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   // could put some input validation here if we want
-  // message the user if validation fails
-
-  //bucketApi.createItem(data)
-  // .then(bucketUi.onCreateItemSuccess)
-  // .catch(bucketUi.onError)
 
   // make API call
   bucketApi.createItem(data)
     // if API call is successful, call a success function in UI
-    .then(bucketUi.onCreateItemSuccess)
+    .then(() => {debugger})
+    // .then(bucketUi.onCreateItemSuccess)
     // if API call fails, call an error function in UI
     .catch(bucketUi.onError)
 }
