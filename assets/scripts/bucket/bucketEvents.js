@@ -61,7 +61,6 @@ const onCreateItem = function (event) {
         // .then(bucketUi.onCreateItemSuccess)
         // .catch(bucketUi.onError)
 
-const data = getFormFields(this)
     // make API call
     bucketApi.createItem(data)
     // if API call is successful, call a success function in UI
@@ -92,6 +91,8 @@ const onUpdateItem = function (event) {
   // bucketApi.updateItem(data)
   // .then(bucketUi.onUpdateItemSuccess)
   // .catch(bucketUi.onError)
+
+}
 const addHandlers = () => { 
     // for each of the following replace the spaces between the sets of single quotes:
     // add the HTML id, class, or element we want to attach an event to, and the event/s
