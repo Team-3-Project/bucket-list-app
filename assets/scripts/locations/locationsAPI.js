@@ -46,7 +46,7 @@ const updatelocation = function (data) {
 const createlocation = function (data) {
   console.log(data)
   console.log(store)
-  debugger
+  
   return $.ajax({
     url: config.apiUrl + '/locations',
     method: 'POST',
