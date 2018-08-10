@@ -68,10 +68,10 @@ const onCreateItem = function (event) {
     // if API call fails, call an error function in UI
     .catch(() => console.log("error"))
 }
-const onGetBooks = (event) => {
+const onGetBlItems = (event) => {
   event.preventDefault()
   bucketApi.getBooks()
-    .then(bucketUi.getBooksSuccess)
+    .then(bucketUi.getBlItemsSuccess)
     .catch(bucketUi.failure)
 }
 
@@ -108,7 +108,7 @@ const addHandlers = () => {
     // $(' ').on(' ', onUpdateItem)
     $('#create-item').on('submit', onCreateItem)
 
-    $('#getBooksButton').on('click', onGetBooks)
+    $('#getBooksButton').on('click', onGetBlItems)
   $('#clearBooksButton').on('click', onClearBooks)
   $('.content').on('click', '.btn-danger', onDeleteBook)
   $('.content').on('click', '.btn-secondary', onUpdateItem)

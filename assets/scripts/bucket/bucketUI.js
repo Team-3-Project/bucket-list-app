@@ -23,11 +23,11 @@ const onError = function () {
 }
 
 // handlebars demo
-const showBooksTemplate = require('../templates/book-listing.handlebars')
+const accordionTemplate = require('../templates/book-listing.handlebars')
 
-const getBooksSuccess = (data) => {
-  const showBooksHtml = showBooksTemplate({ blItems: data.blItems })
-  $('.content').html(showBooksHtml)
+const getBlItemsSuccess = (data) => {
+  const showAccordion = accordionTemplate({ blItems: data.blItems })
+  $('.content').html(showAccordion)
 }
 
 const clearBooks = () => {
@@ -45,7 +45,7 @@ module.exports = {
   showItemSuccess,
   onDeleteItemSuccess,
   onUpdateItemSuccess,
-  getBooksSuccess,
+  getBlItemsSuccess,
   clearBooks,
   failure,
   onError
