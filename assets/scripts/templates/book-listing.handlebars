@@ -60,7 +60,10 @@
       <div id="collapseThree{{blItem._id}}" class="collapse" aria-labelledby="headingThree" data-parent="#accordion{{blItem._id}}">
         <div class="card-body" data-id="{{blItem._id}}">
           <button class="btn btn-danger" type="submit">Remove</button>
-          <form>
+
+
+
+          <form id="{{blItem._id}}">
             <h4 class="display-4">Update Item</h4>
 
             <label>Item Name</label>
@@ -71,12 +74,11 @@
             <input type='text' name='location[name]' class="form-control" placeholder="Location">
             <button type='submit' class='btn btn-secondary'> Submit </button>
           </form>
+
+
         </div>
       </div>
     </div>
   </div>
   <br>
-  <br>
-
-
-  {{/each}} {{!-- </div> --}}
+  <br> {{/each}} {{!-- </div> --}}
