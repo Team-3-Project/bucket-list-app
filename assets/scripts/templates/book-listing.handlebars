@@ -13,20 +13,20 @@
     </div>
 
   </div> --}} {{!-- accordion card working! --}}
-  <div id="accordion{{blItem.id}}">
+  <div id="accordion{{blItem._id}}">
 
     <div class="card">
-      <div class="card-header" id="headingOne{{blItem.id}}">
+      <div class="card-header" id="headingOne{{blItem._id}}">
         <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#firstPage{{blItem.id}}" aria-expanded="true" aria-controls="collapseOne">
-            Title
+          <button class="btn btn-link" data-toggle="collapse" data-target="#firstPage{{blItem._id}}" aria-expanded="true" aria-controls="collapseOne">
+            Name
           </button>
         </h5>
       </div>
 
-      <div id="firstPage{{blItem.id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion{{blItem.id}}">
+      <div id="firstPage{{blItem._id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion{{blItem._id}}">
         <div class="card-body">
-          {{blItem.title}}
+          {{blItem_.name}}
 
           <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
             alt="First slide">
@@ -35,30 +35,30 @@
     </div>
 
     <div class="card">
-      <div class="card-header" id="headingTwo{{blItem.id}}">
+      <div class="card-header" id="headingTwo{{blItem._id}}">
         <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo{{blItem.id}}" aria-expanded="false"
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo{{blItem._id}}" aria-expanded="false"
             aria-controls="collapseTwo">
-            Author </button>
+            Description </button>
         </h5>
       </div>
-      <div id="collapseTwo{{blItem.id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion{{blItem.id}}">
+      <div id="collapseTwo{{blItem._id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion{{blItem._id}}">
         <div class="card-body">
-          {{blItem.author}}
+          {{blItem.description}}
 
         </div>
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="headingThree{{blItem.id}}">
+      <div class="card-header" id="headingThree{{blItem._id}}">
         <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree{{blItem.id}}" aria-expanded="false"
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree{{blItem._id}}" aria-expanded="false"
             aria-controls="collapseThree">
             ID </button>
         </h5>
       </div>
-      <div id="collapseThree{{blItem.id}}" class="collapse" aria-labelledby="headingThree" data-parent="#accordion{{blItem.id}}">
-        <div class="card-body" data-id="{{blItem.id}}">
+      <div id="collapseThree{{blItem._id}}" class="collapse" aria-labelledby="headingThree" data-parent="#accordion{{blItem._id}}">
+        <div class="card-body" data-id="{{blItem._id}}">
           <button class="btn btn-danger" type="submit">Remove</button>
           <form>
             <h4 class="display-4">Update Item</h4>

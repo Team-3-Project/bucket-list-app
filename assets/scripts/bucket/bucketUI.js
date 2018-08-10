@@ -26,7 +26,7 @@ const onError = function () {
 const showBooksTemplate = require('../templates/book-listing.handlebars')
 
 const getBooksSuccess = (data) => {
-  const showBooksHtml = showBooksTemplate({ books: data.books })
+  const showBooksHtml = showBooksTemplate({ blItems: data.blItems })
   $('.content').html(showBooksHtml)
 }
 
