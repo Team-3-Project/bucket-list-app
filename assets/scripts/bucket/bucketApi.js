@@ -54,7 +54,7 @@ const createItem = function (data) {
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data : {
+    data: {
       item: {
         name: data.item.item_name,
         description: data.item.description,
@@ -68,7 +68,7 @@ const createItem = function (data) {
 // handlebars demo
 const getBooks = function () {
   return $.ajax({
-    url: config.apiUrl + '/books'
+    url: config.apiUrl + '/bl-items'
   })
 }
 

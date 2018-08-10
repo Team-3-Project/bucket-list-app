@@ -65,7 +65,6 @@ const onCreateItem = function (event) {
     bucketApi.createItem(data)
     // if API call is successful, call a success function in UI
     .then(() => console.log(data))
-    .then(() => {debugger})
     // if API call fails, call an error function in UI
     .catch(() => console.log("error"))
 }

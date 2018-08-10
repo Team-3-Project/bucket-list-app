@@ -3,9 +3,9 @@
 let apiUrl
 const apiUrls = {
   production: '<replace-with-heroku-url>',
-  // development: 'http://localhost:4741'
+  development: 'http://localhost:4741'
   // commented out for handlebars practice
-  development: 'https://ga-library-api.herokuapp.com'
+  // development: 'https://ga-library-api.herokuapp.com'
 }
 
 
