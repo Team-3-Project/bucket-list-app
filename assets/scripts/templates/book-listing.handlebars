@@ -1,5 +1,5 @@
-{{!-- <div class="row"> --}}
-  {{#each books as |book|}} {{log book}} {{!--
+{{!--
+<div class="row"> --}} {{#each books as |book|}} {{log book}} {{!--
   <div class="card col-4" style="width: 18rem;" id="cardTest" data-id="{{book.id}}">
     <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
     <div class="card-body" data-id="{{book.id}}">
@@ -12,36 +12,39 @@
       <button class="btn btn-danger" type="submit">Remove</button>
     </div>
 
-  </div> --}} {{!-- accordion card --}}
+  </div> --}} {{!-- accordion card working! --}}
   <div id="accordion{{book.id}}">
 
     <div class="card">
       <div class="card-header" id="headingOne{{book.id}}">
         <h5 class="mb-0">
           <button class="btn btn-link" data-toggle="collapse" data-target="#firstPage{{book.id}}" aria-expanded="true" aria-controls="collapseOne">
-            Collapsible Group Item #1
+            Title
           </button>
         </h5>
       </div>
 
       <div id="firstPage{{book.id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion{{book.id}}">
         <div class="card-body">
+          {{book.title}}
 
+          <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
+            alt="First slide">
         </div>
       </div>
     </div>
+
     <div class="card">
       <div class="card-header" id="headingTwo{{book.id}}">
         <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo{{book.id}}" aria-expanded="false" aria-controls="collapseTwo">
-            Collapsible Group Item #2
-          </button>
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo{{book.id}}" aria-expanded="false"
+            aria-controls="collapseTwo">
+            Author </button>
         </h5>
       </div>
       <div id="collapseTwo{{book.id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion{{book.id}}">
         <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-          non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+          {{book.author}}
 
         </div>
       </div>
@@ -49,33 +52,46 @@
     <div class="card">
       <div class="card-header" id="headingThree{{book.id}}">
         <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree{{book.id}}" aria-expanded="false" aria-controls="collapseThree">
-            Collapsible Group Item #3
-          </button>
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree{{book.id}}" aria-expanded="false"
+            aria-controls="collapseThree">
+            ID </button>
         </h5>
       </div>
       <div id="collapseThree{{book.id}}" class="collapse" aria-labelledby="headingThree" data-parent="#accordion{{book.id}}">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-          non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+        <div class="card-body" data-id="{{book.id}}">
+          <button class="btn btn-danger" type="submit">Remove</button>
+          <form>
+            <h4 class="display-4">Update Item</h4>
 
+            <label>Item Name</label>
+            <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
+            <label>Description</label>
+            <input type='text' name='item[description]' class="form-control" placeholder="Description">
+            <label>Location</label>
+            <input type='text' name='location[name]' class="form-control" placeholder="Location">
+            <button type='submit'> Submit </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+  <br>
+  <br>
 
   {{!-- accordion card end --}}
-
-  <!-- modal  -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <!-- modal -->{{!--
+  <div class="modal fade" id="exampleModalCenter{{book.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">{{book.title}}</h5>
+          <h5 class="modal-title" id="exampleModalLongTitle{{book.id}}">{{book.title}}</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
+
           <!-- Update Item Form -->
           <form>
             <h4 class="display-4">Update Item</h4>
@@ -96,8 +112,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <!-- end modal -->
-  {{/each}}
-{{!-- </div> --}}
+  {{/each}} {{!-- </div> --}}
