@@ -3,18 +3,15 @@
 const config = require('../config')
 const store = require('../store')
 
-const getItems = function () {
+const getlocations = function () {
   return $.ajax({
-    url: config.apiUrl + '/bl-items',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
+    url: config.apiUrl + '/locations',
+    method: 'GET'
   })
 }
-const showItem = (itemId) => {
+const showlocation = (locationId) => {
   return $.ajax({
-    url: config.apiUrl + '/bl-items/' + itemId,
+    url: config.apiUrl + '/locations/' + locationId,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -22,9 +19,9 @@ const showItem = (itemId) => {
   })
 }
 
-const deleteItem = (itemId) => {
+const deletelocation = (locationId) => {
   return $.ajax({
-    url: config.apiUrl + '/bl-items/' + itemId,
+    url: config.apiUrl + '/locations/' + locationId,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -32,12 +29,12 @@ const deleteItem = (itemId) => {
   })
 }
 
-const updateItem = function (data) {
+const updatelocation = function (data) {
   // console.log(data)
-  // console.log(data.item.id)
+  // console.log(data.location.id)
   // console.log(store.user.token)
   return $.ajax({
-    url: config.apiUrl + '/bl-items/' + data.item.id,
+    url: config.apiUrl + '/locations/' + data.location.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -46,20 +43,21 @@ const updateItem = function (data) {
   })
 }
 
-const createItem = function (data) {
+const createlocation = function (data) {
   console.log(data)
+  console.log(store)
   debugger
   return $.ajax({
-    url: config.apiUrl + '/bl-items',
+    url: config.apiUrl + '/locations',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data : {
-      item: {
-        name: data.item.item_name,
-        description: data.item.description,
-        location: data.Locations,
+    data: {
+      location: {
+        name: data.location.location_name,
+        description: data.location.description,
+        location: data.location.name,
         owner: store.user._id
       }
     }
@@ -67,9 +65,9 @@ const createItem = function (data) {
 }
 
 module.exports = {
-  getItems,
-  deleteItem,
-  createItem,
-  updateItem,
-  showItem
+  getlocations,
+  deletelocation,
+  createlocation,
+  updatelocation,
+  showlocation
 }

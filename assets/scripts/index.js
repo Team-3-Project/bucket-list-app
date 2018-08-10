@@ -7,8 +7,9 @@
 // require('./example')
 require('./auth/auth')
 const bucketEvents = require('./bucket/bucketEvents')
+const locationEvents = require('./locations/locationEvents')
 $(() => {
-  // your JS code goes here
+  locationEvents.getLocations()
   bucketEvents.addHandlers()
   // click handler for testing bootstrap manipulation, can move later
   $("#markAsCompleted").click(function () {
