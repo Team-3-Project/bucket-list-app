@@ -38,12 +38,6 @@ const failure = (error) => {
   console.error(error)
 }
 
-module.exports = {
-  getBooksSuccess,
-  clearBooks,
-  failure
-}
-// end handlebars demo
 
 module.exports = {
   onCreateItemSuccess,
@@ -51,10 +45,8 @@ module.exports = {
   showItemSuccess,
   onDeleteItemSuccess,
   onUpdateItemSuccess,
-  // handlebars
   getBooksSuccess,
   clearBooks,
   failure,
-  // end handlebars
   onError
 }

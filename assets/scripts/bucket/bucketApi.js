@@ -80,9 +80,7 @@ module.exports = {
   deleteItem,
   createItem,
   updateItem,
-  // handebars
   deleteBook,
   getBooks,
-  // handebars end
   showItem
 }
