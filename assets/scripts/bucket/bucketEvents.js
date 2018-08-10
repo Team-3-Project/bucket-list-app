@@ -69,6 +69,12 @@ const onCreateItem = function (event) {
     // if API call fails, call an error function in UI
     .catch(() => console.log("error"))
 }
+const onGetBooks = (event) => {
+  event.preventDefault()
+  bucketApi.getBooks()
+    .then(bucketUi.getBooksSuccess)
+    .catch(bucketUi.failure)
+}
 
 const onClearBooks = (event) => {
   event.preventDefault()
@@ -93,7 +99,7 @@ const onUpdateItem = function (event) {
   // .catch(bucketUi.onError)
 
 }
-const addHandlers = () => { 
+const addHandlers = () => {
     // for each of the following replace the spaces between the sets of single quotes:
     // add the HTML id, class, or element we want to attach an event to, and the event/s
     // optional: add a selector and/or data before the event/s
@@ -102,7 +108,7 @@ const addHandlers = () => {
     // $(' ').on(' ', onDeleteItem)
     // $(' ').on(' ', onUpdateItem)
     $('#create-item').on('submit', onCreateItem)
-  
+
     $('#getBooksButton').on('click', onGetBooks)
   $('#clearBooksButton').on('click', onClearBooks)
   $('.content').on('click', '.btn-danger', onDeleteBook)
