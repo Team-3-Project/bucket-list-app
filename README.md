@@ -1,6 +1,9 @@
 # Bucket List Team Project- Front End/ Read.me
 Overview
-The second project I was given at General Assembly was to create a full stack project based on one to many relationship. In I needed to create a Single Page Application for the web that would allow a user to to interact with the website and the back end was used to authenticate the functions off CRUD. 
+This is a group project assignment that was given by General Assembly.Our assignment included creating a website that pertains to bucketlists. We initally thought it would be best to mostly base it on one to many relationships. We needed to create a Single Page Application for the web that would allow a user to to interact with the website and the back end was used to authenticate the functions off CRUD.
+
+#Link for wiki that includes ERD, Wireframe and workflow.
+https://github.com/Team-3-Project/bucket-list-api.wiki.git
 
 #My user stories for this project were:
 
@@ -35,10 +38,10 @@ Features/Additions
 Styling min
 Wireframe
 
-Stretch goals:To add locations to our project.
+#Stretch Goals
+To add locations to our project.
 
-
-Team participation:
+#Team Participation
 As a team we decided to start with meeting project requirements.
 Together we joined in on discussing how our project would be created. We started by Terry whiteboarding. He made an ERD and wireframe.
 
@@ -46,7 +49,7 @@ Alex worked on design mostly with bootstrap,html,CSS and SASS. Alex worked on co
 
 River worked on Schema,used HTML to Sign up with email,password and password confirmation,HTML to code and revising Auth code in html.River worked on the front end Update form.
 
-Terry created wireframe doc,created ERD doc, Terry took resposibility for merging pullrequests and backend api. Added HTML code for log out while logged in. Terry copied the auth code into the repo. He tested our API with postman .
+Terry created wireframe doc,created ERD doc, Terry took resposibility for merging pullrequests and backend api. Added HTML code for log out while logged in. Terry copied the auth code into the repo. He tested our API with postman .Terry is also working on maps
 
 Kimber worked on Read.me,User stories as well as adding front end api. Created button for bucketlist in HTML.Added the crud api code from River with a few updates to fit our project needs such as updating method GET and get item by id. Added html code for changing password with current and new password.
 
@@ -60,10 +63,9 @@ We all had our own visions on how dynamic the project was going to be.
 
 
 
-
 #Things we did right
 
-We had a stand up at the begenning of each day.
+We had a stand up at the beginning of each day.
 We communicated throughout the day.
 We sat in the same space together and worked indepedantly but as a group also.
 We pushed after each feature or piece of code we were responsible for.
