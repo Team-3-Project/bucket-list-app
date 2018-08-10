@@ -65,10 +65,28 @@ const createItem = function (data) {
   })
 }
 
+// handlebars demo
+const getBooks = function () {
+  return $.ajax({
+    url: config.apiUrl + '/books'
+  })
+}
+
+const deleteBook = (bookId) => {
+  return $.ajax({
+    url: config.apiUrl + '/books/' + bookId,
+    method: 'DELETE'
+  })
+}
+
+// handebars demo end
+
 module.exports = {
   getItems,
   deleteItem,
   createItem,
   updateItem,
+  deleteBook,
+  getBooks,
   showItem
 }

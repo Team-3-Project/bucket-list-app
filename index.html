@@ -134,7 +134,7 @@
       <h6 class="card-title">Location</h6>
       <p class="card-text">This is where the bucket list description goes</p>
       <a href="#" class="btn btn-primary" id="markAsCompleted">Mark As Completed</a>
-      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>
+      <!-- <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Edit</a> -->
 
     </div>
   </div>
@@ -143,42 +143,25 @@
 
   <!-- container for bootstrap positoning  -->
 
+  <h4 class="display-4">Handlebars</h4>
 
-  <!-- container end -->
+  <button id="getBooksButton" class="btn btn-default">Get Books!</button>
+  <button id="clearBooksButton" class="btn btn-default">Clear Books!</button>
 
-  <!-- Modals section  -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Update Your Item</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <!-- Update Item Form -->
-          <form id='update-item'>
-            <h4 class="display-4">Update Item</h4>
+  <div class="album py-5 bg-light">
+    <div class="container">
 
-            <label>Item Name</label>
-            <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
-            <label>Description</label>
-            <input type='text' name='item[description]' class="form-control" placeholder="Description">
-            <label>Location</label>
-            <input type='text' name='location[name]' class="form-control" placeholder="Location">
-            <button type='submit'> Submit </button>
-          </form>
-          <!-- End Update Item Form-->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Remove Card</button>
-        </div>
+      <div id="content container" class="content col-8">
+        <!-- where handlebars appends -->
       </div>
+
     </div>
   </div>
-  <!-- end modal -->
+
+
+
+
+
 </body>
 
 </html>

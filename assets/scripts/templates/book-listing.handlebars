@@ -1,0 +1,82 @@
+{{!--
+<div class="row"> --}} {{#each books as |book|}} {{log book}} {{!--
+  <div class="card col-4" style="width: 18rem;" id="cardTest" data-id="{{book.id}}">
+    <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+    <div class="card-body" data-id="{{book.id}}">
+      <h5 class="card-title">{{book.title}}</h5>
+      <h6 class="card-title"> {{book.author}}</h6>
+      <p class="card-text">This is where the bucket list description goes</p>
+      <a href="#" class="btn btn-primary" id="markAsCompleted">Mark As Completed</a>
+      <a href="#" class="btn btn-primary" data-toggle="modal" data-id="{{book.id}}" data-target="#exampleModalCenter">Edit</a>
+
+      <button class="btn btn-danger" type="submit">Remove</button>
+    </div>
+
+  </div> --}} {{!-- accordion card working! --}}
+  <div id="accordion{{book.id}}">
+
+    <div class="card">
+      <div class="card-header" id="headingOne{{book.id}}">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#firstPage{{book.id}}" aria-expanded="true" aria-controls="collapseOne">
+            Title
+          </button>
+        </h5>
+      </div>
+
+      <div id="firstPage{{book.id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion{{book.id}}">
+        <div class="card-body">
+          {{book.title}}
+
+          <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
+            alt="First slide">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingTwo{{book.id}}">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo{{book.id}}" aria-expanded="false"
+            aria-controls="collapseTwo">
+            Author </button>
+        </h5>
+      </div>
+      <div id="collapseTwo{{book.id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion{{book.id}}">
+        <div class="card-body">
+          {{book.author}}
+
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree{{book.id}}">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree{{book.id}}" aria-expanded="false"
+            aria-controls="collapseThree">
+            ID </button>
+        </h5>
+      </div>
+      <div id="collapseThree{{book.id}}" class="collapse" aria-labelledby="headingThree" data-parent="#accordion{{book.id}}">
+        <div class="card-body" data-id="{{book.id}}">
+          <button class="btn btn-danger" type="submit">Remove</button>
+          <form>
+            <h4 class="display-4">Update Item</h4>
+
+            <label>Item Name</label>
+            <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
+            <label>Description</label>
+            <input type='text' name='item[description]' class="form-control" placeholder="Description">
+            <label>Location</label>
+            <input type='text' name='location[name]' class="form-control" placeholder="Location">
+            <button type='submit' class='btn btn-secondary'> Submit </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+
+  {{/each}} {{!-- </div> --}}
