@@ -83,6 +83,7 @@ const onDeleteBook = (event) => {
     .catch(bucketUi.failure)
 }
 
+<<<<<<< d1b41cd89bef354de00cf76eea85da528455334b
 const onUpdateItem = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -92,6 +93,18 @@ const onUpdateItem = function (event) {
   // .then(bucketUi.onUpdateItemSuccess)
   // .catch(bucketUi.onError)
   }
+=======
+const onUpdateBook = function (event) {
+  event.preventDefault()
+  // could put some input validation here if we want
+  // message the user if validation fails
+
+  // make API call
+  // if API call is successful, call a success function in UI
+  // if API call fails, call an error function in UI
+}
+
+>>>>>>> preparing for rivers update
 
 const onViewBook = (event) => {
   console.log('hi')
