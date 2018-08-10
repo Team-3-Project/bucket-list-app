@@ -1,55 +1,59 @@
 'use strict'
 
 const getFormFields = require('../../../lib/get-form-fields')
-const bucketApi = require('./bucketApi.js')
-const bucketUi = require('./bucketUI.js')
+const bucketApi = require('./bucketApi')
+const bucketUi = require('./bucketUI')
 
 
-const onGetItems = (event) => {
+const onGetItems = function(event) {
     event.preventDefault()
-    // make API call
-    // if API call is successful, call a success function in UI
-    // if API call fails, call an error function in UI
+    bucketApi.getItems()
+        // .then(bucketUi.getItemsSuccess)
+        // .catch(bucketUi.onError)
 }
 
 
-const onShowItem = (event) => {
+const onShowItem = function(event) {
     event.preventDefault()
+    const data = getFormFields(event.target)
     // could put some input validation here if we want
     // message the user if validation fails
-
-    // make API call
-    // if API call is successful, call a success function in UI
-    // if API call fails, call an error function in UI
+    bucketApi.showItem(data)
+        // .then(bucketUi.showItemSuccess)
+        // .catch(bucketUi.onError)
 }
 
 
-const onDeleteItem = (event) => {
+const onDeleteItem = function(event) {
     event.preventDefault()
-    // could put some input validation here if we want
-    // message the user if validation fails
-
-    // make API call
-    // if API call is successful, call a success function in UI
-    // if API call fails, call an error function in UI
+    const itemId = $(event.target).closest('ul').attr('data-id')
+    bucketApi.deleteItem(itemId)
+    //   .then(bucketUi.onDeleteItemSuccess)
+    //   .catch(bucketUi.onError)
 }
 
 
 const onUpdateItem = function (event) {
     event.preventDefault()
+    const data = getFormFields(event.target)
     // could put some input validation here if we want
     // message the user if validation fails
-
-    // make API call
-    // if API call is successful, call a success function in UI
-    // if API call fails, call an error function in UI
+    bucketApi.updateItem(data)
+        // .then(bucketUi.onUpdateItemSuccess)
+        // .catch(bucketUi.onError)
     }
 
 
 const onCreateItem = function (event) {
     event.preventDefault()
+    const data = getFormFields(event.target)
     // could put some input validation here if we want
     // message the user if validation fails
+
+    //bucketApi.createItem(data)
+        // .then(bucketUi.onCreateItemSuccess)
+        // .catch(bucketUi.onError)
+
 const data = getFormFields(this)
     // make API call
     bucketApi.createItem(data)
@@ -58,7 +62,7 @@ const data = getFormFields(this)
     .then(() => {debugger})
     // if API call fails, call an error function in UI
     .catch(() => console.log("error"))
-    
+
 }
 
 
@@ -71,6 +75,7 @@ const addHandlers = () => {
     // $(' ').on(' ', onDeleteItem)
     // $(' ').on(' ', onUpdateItem)
     $('#create-item').on('submit', onCreateItem)
+
 }
 
 module.exports = {
