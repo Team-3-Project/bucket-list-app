@@ -1,74 +1,77 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# Bucket List Team Project- Front End/ Read.me
+Overview
+This is a group project assignment that was given by General Assembly.Our assignment included creating a website that pertains to bucketlists. We initally thought it would be best to mostly base it on one to many relationships. We needed to create a Single Page Application for the web that would allow a user to to interact with the website and the back end was used to authenticate the functions off CRUD.
 
-# browser-template
+#Link for wiki that includes ERD, Wireframe and workflow.
+https://github.com/Team-3-Project/bucket-list-api.wiki.git
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+#My user stories for this project were:
 
-## Installation
+As a user I can sign up, sign in,I can change password and sign out of the app.
+Once signed in, I can create a bucket list, search for bucket list items, delete a bucket list item and update a bucketlist item.
+I can see a message that tells me if I was successful or not.
 
-1. [Download](../../archive/master.zip) this template.
-1. Move to the `wdi/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `ga-wdi-boston.browser-template` with the name of
-    your project.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
+#Project Requirements are:
+Our app has been deployed on Github pages.
+Many cohesive commits dating back to the first day of building our project.
+This read.me was created to document the process and technologies used
+Query was used for DOM manipulation and AJAX for interacting with the API
 
-## Structure
+Technologies Used:
+HTML5 Alex-Kimber-River
+CSS3-Alex
+SASS-Alex
+Bootstrap- primarily
+JavaScript-River-Kimber
+jQuery-River-
+Mongoose
+Mongo
+Handlebars-Alex
+Postman-Terry
+Express-
+We used HTML5 to build the basic structure of the app and CSS3, SASS and Bootstrap to style.
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/index.js`](assets/scripts/index.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+The forms and modals were done using HTML and Bootstrap.
 
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`config/environment.js`](config/environment.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
+Javascript is used to build the logic, send AJAX calls and jQuery is used to interact with the DOM and update the view
+Features/Additions
+Styling min
+Wireframe
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-included in this template.
+#Stretch Goals
+To add locations to our project.
 
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
+#Team Participation
+As a team we decided to start with meeting project requirements.
+Together we joined in on discussing how our project would be created. We started by Terry whiteboarding. He made an ERD and wireframe.
 
-To deploy a browser-template based SPA, run `grunt deploy`.
+Alex worked on design mostly with bootstrap,html,CSS and SASS. Alex worked on connecting the Update on the back end. He implemented images to show on our site. He used handlebars to implement a template that he chose to work with on the project.
 
-## Tasks
+River worked on Schema,used HTML to Sign up with email,password and password confirmation,HTML to code and revising Auth code in html.River worked on the front end Update form.
 
-Developers should run these often!
+Terry created wireframe doc,created ERD doc, Terry took resposibility for merging pullrequests and backend api. Added HTML code for log out while logged in. Terry copied the auth code into the repo. He tested our API with postman .Terry is also working on maps
 
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt test`: runs any automated tests, depends on `grunt build`
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
+Kimber worked on Read.me,User stories as well as adding front end api. Created button for bucketlist in HTML.Added the crud api code from River with a few updates to fit our project needs such as updating method GET and get item by id. Added html code for changing password with current and new password.
 
-## Additional Resources
+We all have commits in both repos- We also each contributed to the blocks of code for route controllers in API.
 
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
+#Challenges
 
-## [License](LICENSE)
+We had a few challenges with merge conflicts.
+A few minor oops on pushing to the master branch, but was resolved.
+We all had our own visions on how dynamic the project was going to be.
 
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+
+
+#Things we did right
+
+We had a stand up at the beginning of each day.
+We communicated throughout the day.
+We sat in the same space together and worked indepedantly but as a group also.
+We pushed after each feature or piece of code we were responsible for.
+We mostly pulled at the same time from our develpment branch so we could make sure to stay on the same page. 
+
+
+
+#Link to Front End
+
