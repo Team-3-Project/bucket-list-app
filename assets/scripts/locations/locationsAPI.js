@@ -30,9 +30,6 @@ const deletelocation = (locationId) => {
 }
 
 const updatelocation = function (data) {
-  // console.log(data)
-  // console.log(data.location.id)
-  // console.log(store.user.token)
   return $.ajax({
     url: config.apiUrl + '/locations/' + data.location.id,
     method: 'PATCH',
@@ -44,9 +41,6 @@ const updatelocation = function (data) {
 }
 
 const createlocation = function (data) {
-  console.log(data)
-  console.log(store)
-  
   return $.ajax({
     url: config.apiUrl + '/locations',
     method: 'POST',
