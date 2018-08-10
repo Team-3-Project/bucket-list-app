@@ -13,13 +13,15 @@ const bookEvents = require('./bucket/bucketEvents.js')
 // handelbars demo end
 
 $(() => {
-// handlebars demo
+  // handlebars demo
   bookEvents.addHandlers()
 
   // handlebars demo end
 
+
+
   // click handler for testing bootstrap manipulation, can move later
-  $("#markAsCompleted").click(function(){
+  $("#markAsCompleted").click(function () {
     event.preventDefault()
     $('#cardTest').addClass("bg-success text-white")
   })
