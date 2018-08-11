@@ -13,7 +13,7 @@ const getLocations = () => {
         dropdown.append(`<option value=${locationList.locations[i].location}>${locationList.locations[i].location}</option>`)
       }
   })
-    .catch(() => console.log('error'))
+    .catch(() => {return} )
 }
 
 module.exports = {

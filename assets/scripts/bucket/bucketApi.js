@@ -33,9 +33,6 @@ const deleteItem = (itemId) => {
 }
 
 const updateItem = function (data) {
-  // console.log(data)
-  // console.log(data.item.id)
-  // console.log(store.user.token)
   return $.ajax({
     url: config.apiUrl + '/bl-items/' + data.item.id,
     method: 'PATCH',
@@ -47,7 +44,6 @@ const updateItem = function (data) {
 }
 
 const createItem = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/bl-items',
     method: 'POST',

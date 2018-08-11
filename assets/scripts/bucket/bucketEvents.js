@@ -19,7 +19,6 @@ const onGetItems = function (event) {
   // .catch(bucketUi.onError)
 }
 
-
 const onShowItem = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -86,6 +85,9 @@ const onDeleteBook = (event) => {
   bucketApi.deleteBook(bookId)
     .then(() => onGetBlItems(event))
     .catch(bucketUi.failure)
+    .then(bucketUi.onCreateItemSuccess)
+    // if API call fails, call an error function in UI
+    .catch(bucketUi.onError)
 }
 
 const onUpdateItem = function (event) {
@@ -112,6 +114,7 @@ const addHandlers = () => {
   $('#getBooksButton').on('click', onGetBlItems)
   $('#clearBooksButton').on('click', onClearBooks)
   $('.content').on('click', '.btn-danger', onDeleteBook)
+
   $('.content').on('click', '.btn-secondary', onUpdateItem)
 
   $('.updater').on('submit', onUpdateItem)

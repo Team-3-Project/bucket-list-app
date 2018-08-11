@@ -18,16 +18,15 @@ const onSignUpFailure = function () {
   $('#sign-up-message').css('background-color', 'red')
 }
 
-const onSignInSuccess = function (data) {
-  store.user = data.user
-  console.log(store.user.token)
-  $('#sign-in-message').text('Signed in successfully.')
-  $('#sign-in-message').css('background-color', 'green')
+
+const onSignInSuccess = function(data) {
+    store.user = data.user
+    $('#sign-in-message').text('Signed in successfully.')
+    $('#sign-in-message').css('background-color', 'green')
 }
-const onSignInFailure = function (error) {
-  console.log(error)
-  $('#sign-in-message').text('Signed in failed.')
-  $('#sign-in-message').css('background-color', 'red')
+const onSignInFailure = function(error) {
+    $('#sign-in-message').text('Signed in failed.')
+    $('#sign-in-message').css('background-color', 'red')
 }
 
 const onChangePasswordSuccess = function () {
