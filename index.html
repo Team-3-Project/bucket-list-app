@@ -18,48 +18,55 @@
 <body>
 
 
-  <!--jumbotron header-->
+
+
+
+  <!-- landing page -->
+  <div id="loginPage" align="center">
+    <!-- BEGIN SIGN UP -->
+
+      <!--jumbotron header-->
   <div class="jumbotron">
-    <h1 class="display-4">Bucket List</h1>
-    <p class="lead">Where do you want to go?</p>
-    <hr class="my-4">
-    <p>Enter in the name of what you want to do, a brief description, and a location</p>
+      <h1 class="display-4">Bucket List</h1>
+      <p class="lead">Where do you want to go?</p>
+      <hr class="my-4">
+    </div>
+
+    <form id="sign-up">
+      <h4 class="display-4">Make an account</h4>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Sign Up</label>
+        <input type="email" name="credentials[email]" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter email">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name="credentials[password]" value="" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+        <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password" value="" class="form-control"
+          id="exampleInputPassword2">
+        <input type="submit" name="submit" class="btn btn-primary">
+      </div>
+    </form>
+    <!-- END SIGN UP -->
+    <br>
+    <!-- BEGIN SIGN IN -->
+    <form id="sign-in">
+
+      <h4 class="display-4">Sign In</h4>
+      <div class="form-group">
+        <label for="logInEmail">Sign In</label>
+        <input type="email" name="credentials[email]" value="" class="form-control" id="logInEmail" aria-describedby="emailHelp"
+          placeholder="Enter email">
+        <label for="logInPassword">Password</label>
+        <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="Password">
+        <input type="submit" name="submit" class="btn btn-primary">
+
+      </div>
+    </form>
+    <!-- END SIGN IN -->
+
   </div>
-
-
-  <!-- BEGIN SIGN UP -->
-  <form id="sign-up">
-    <h4 class="display-4">Make an account</h4>
-
-    <div class="form-group">
-      <label for="exampleInputEmail1">Sign Up</label>
-      <input type="email" name="credentials[email]" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-        placeholder="Enter email">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="credentials[password]" value="" class="form-control" id="exampleInputPassword1" placeholder="Password">
-
-      <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password" value="" class="form-control"
-        id="exampleInputPassword2">
-      <input type="submit" name="submit" class="btn btn-primary">
-    </div>
-  </form>
-  <!-- END SIGN UP -->
-
-  <!-- BEGIN SIGN IN -->
-  <form id="sign-in">
-
-    <h4 class="display-4">Sign In</h4>
-    <div class="form-group">
-      <label for="logInEmail">Sign In</label>
-      <input type="email" name="credentials[email]" value="" class="form-control" id="logInEmail" aria-describedby="emailHelp"
-        placeholder="Enter email">
-      <label for="logInPassword">Password</label>
-      <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="Password">
-      <input type="submit" name="submit" class="btn btn-primary">
-
-    </div>
-  </form>
-  <!-- END SIGN IN -->
+  <!-- end of landing page -->
 
 
   <!-- BEGIN SIGN OUT -->
@@ -158,22 +165,18 @@
     </div>
   </div>
 
-  <!-- demo for get form fields -->
-  <div class="content">
+  <!-- demo  -->
+  <!-- <form id="form" class="updater">
+      <h4 class="display-4">Update Item</h4>
 
-  <form id="">
-    <h4 class="display-4">Update Item</h4>
+      <label>Item Name</label>
+      <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
+      <label>Description</label>
+      <input type='text' name='item[description]' class="form-control" placeholder="Description">
+      <label>Location</label>
+      <input type='text' name='location[name]' class="form-control" placeholder="Location">
+      <button type='submit' class='btn btn-secondary'> Submit </button>
+    </form> -->
 
-    <label>Item Name</label>
-    <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
-    <label>Description</label>
-    <input type='text' name='item[description]' class="form-control" placeholder="Description">
-    <label>Location</label>
-    <input type='text' name='location[name]' class="form-control" placeholder="Location">
-    <button type='submit' class='btn btn-secondary'> Submit </button>
-  </form>
-  </div>
   <!-- end demo -->
-</body>
-
 </html>

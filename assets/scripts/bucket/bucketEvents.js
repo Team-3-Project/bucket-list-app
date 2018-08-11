@@ -112,7 +112,9 @@ const addHandlers = () => {
   $('#getBooksButton').on('click', onGetBlItems)
   $('#clearBooksButton').on('click', onClearBooks)
   $('.content').on('click', '.btn-danger', onDeleteBook)
-  $('.content').on('submit', '.btn-secondary', onUpdateItem)
+  $('.content').on('click', '.btn-secondary', onUpdateItem)
+
+  $('.updater').on('submit', onUpdateItem)
 
 }
 
