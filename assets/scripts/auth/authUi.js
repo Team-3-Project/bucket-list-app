@@ -21,6 +21,8 @@ const onSignUpFailure = function () {
 
 const onSignInSuccess = function(data) {
     store.user = data.user
+    $('#loginPage').css('display', 'none')
+    $('#mainPage').css('display', 'block')
     $('#sign-in-message').text('Signed in successfully.')
     $('#sign-in-message').css('background-color', 'green')
 }
