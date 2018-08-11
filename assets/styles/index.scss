@@ -1,2 +1,23 @@
 // $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap/scss/bootstrap';
+
+form {
+  margin-top: ($spacer * .75) !important;
+}
+
+input{
+  width: 300px !important;
+}
+
+.jumbotron{
+  height: 220px !important;
+}
+
+.row{
+  background-color: #E9ECEF !important;
+}
+
+// #content{
+//  display: flex;
+//  flex-wrap: wrap;
+// }
