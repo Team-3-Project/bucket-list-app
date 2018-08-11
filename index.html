@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Example</title>
+  <title>Bucket List</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -11,6 +11,8 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+
 </head>
 
 
@@ -18,50 +20,56 @@
 <body>
 
 
-  <!--jumbotron header-->
-  <div class="jumbotron">
-    <h1 class="display-4">Bucket List</h1>
-    <p class="lead">Where do you want to go?</p>
-    <hr class="my-4">
-    <p>Enter in the name of what you want to do, a brief description, and a location</p>
+  <!-- landing page -->
+  <div id="loginPage" align="center">
+    <!-- BEGIN SIGN UP -->
+
+    <!--jumbotron header-->
+    <div class="jumbotron">
+      <h1 class="display-4">Bucket List</h1>
+      <p class="lead">Where do you want to go?</p>
+      <hr class="my-4">
+    </div>
+
+    <form id="sign-up">
+      <h4 class="display-4">Make an account</h4>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Sign Up</label>
+        <input type="email" name="credentials[email]" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter email">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name="credentials[password]" value="" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+        <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password" value="" class="form-control"
+          id="exampleInputPassword2">
+        <input type="submit" name="submit" class="btn btn-primary">
+      </div>
+    </form>
+    <!-- END SIGN UP -->
+    <br>
+    <!-- BEGIN SIGN IN -->
+    <form id="sign-in">
+
+      <h4 class="display-4">Sign In</h4>
+      <div class="form-group">
+        <label for="logInEmail">Sign In</label>
+        <input type="email" name="credentials[email]" value="" class="form-control" id="logInEmail" aria-describedby="emailHelp"
+          placeholder="Enter email">
+        <label for="logInPassword">Password</label>
+        <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="Password">
+        <input type="submit" name="submit" class="btn btn-primary">
+
+      </div>
+    </form>
+    <!-- END SIGN IN -->
+
   </div>
+  <!-- end of landing page -->
 
 
-  <!-- BEGIN SIGN UP -->
-  <form id="sign-up">
-    <h4 class="display-4">Make an account</h4>
-
-    <div class="form-group">
-      <label for="exampleInputEmail1">Sign Up</label>
-      <input type="email" name="credentials[email]" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-        placeholder="Enter email">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="credentials[password]" value="" class="form-control" id="exampleInputPassword1" placeholder="Password">
-
-      <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password" value="" class="form-control"
-        id="exampleInputPassword2">
-      <input type="submit" name="submit" class="btn btn-primary" >
-    </div>
-  </form>
-  <!-- END SIGN UP -->
-
-  <!-- BEGIN SIGN IN -->
-  <form id="sign-in">
-
-    <h4 class="display-4">Sign In</h4>
-    <div class="form-group">
-      <label for="logInEmail">Sign In</label>
-      <input type="email" name="credentials[email]" value="" class="form-control" id="logInEmail" aria-describedby="emailHelp"
-        placeholder="Enter email">
-      <label for="logInPassword">Password</label>
-      <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="Password">
-      <input type="submit" name="submit" class="btn btn-primary">
-
-    </div>
-  </form>
-  <!-- END SIGN IN -->
-
-
+  <!-- exit/password page -->
+  <div id="outPage"  align="center">
   <!-- BEGIN SIGN OUT -->
   <form id="sign-out">
     <h4 class="display-4">Sign Out</h4>
@@ -79,9 +87,17 @@
   </form>
   <!-- END CHANGE PASSWORD -->
 
+  </div>
+
+  <div id="mainPage"  align="center">
   <form id="search-bucket-list">
     <input type="submit" name="list[id]" class="btn btn-primary">
   </form>
+
+  <!-- end exit page -->
+
+
+
 
   <!-- Start Create Item Form -->
   <form id='create-item'>
@@ -158,10 +174,20 @@
     </div>
   </div>
 
+  <!-- demo  -->
+  <!-- <form id="form" class="updater">
+      <h4 class="display-4">Update Item</h4>
 
+      <label>Item Name</label>
+      <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
+      <label>Description</label>
+      <input type='text' name='item[description]' class="form-control" placeholder="Description">
+      <label>Location</label>
+      <input type='text' name='location[name]' class="form-control" placeholder="Location">
+      <button type='submit' class='btn btn-secondary'> Submit </button>
+    </form> -->
 
-
-
-</body>
-
+  <!-- end demo -->
+    </div>
+    </body>
 </html>

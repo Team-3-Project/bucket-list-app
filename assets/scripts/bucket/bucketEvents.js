@@ -6,6 +6,12 @@ const bucketUi = require('./bucketUI')
 
 // section for handebars demo
 
+// const onGetBooks = (event) => {
+//  event.preventDefault()
+//  bucketApi.getBooks()
+//    .then(bucketUi.getBooksSuccess)
+//    .catch(bucketUi.failure)
+
 const onGetItems = function (event) {
   event.preventDefault()
   bucketApi.getItems()
@@ -22,6 +28,7 @@ const onShowItem = function (event) {
   // .then(bucketUi.showItemSuccess)
   // .catch(bucketUi.onError)
 }
+
 
 const onDeleteItem = function (event) {
   event.preventDefault()
@@ -56,6 +63,28 @@ const onCreateItem = function (event) {
   // make API call
   bucketApi.createItem(data)
     // if API call is successful, call a success function in UI
+    .then(() => console.log(data))
+    // if API call fails, call an error function in UI
+    .catch(() => console.log("error"))
+}
+const onGetBlItems = (event) => {
+  event.preventDefault()
+  bucketApi.getBooks()
+    .then(bucketUi.getBlItemsSuccess)
+    .catch(bucketUi.failure)
+}
+
+const onClearBooks = (event) => {
+  event.preventDefault()
+  bucketUi.clearBooks()
+}
+
+const onDeleteBook = (event) => {
+  event.preventDefault()
+  const bookId = $(event.target).closest('div').attr('data-id')
+  bucketApi.deleteBook(bookId)
+    .then(() => onGetBlItems(event))
+    .catch(bucketUi.failure)
     .then(bucketUi.onCreateItemSuccess)
     // if API call fails, call an error function in UI
     .catch(bucketUi.onError)
@@ -64,6 +93,9 @@ const onCreateItem = function (event) {
 const onUpdateItem = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
+  console.log('logging update')
+  console.log(data)
+  console.log(this)
   // bucketApi.updateItem(data)
   // .then(bucketUi.onUpdateItemSuccess)
   // .catch(bucketUi.onError)
@@ -78,7 +110,14 @@ const addHandlers = () => {
   // $(' ').on(' ', onDeleteItem)
   // $(' ').on(' ', onUpdateItem)
   $('#create-item').on('submit', onCreateItem)
+
+  $('#getBooksButton').on('click', onGetBlItems)
+  $('#clearBooksButton').on('click', onClearBooks)
+  $('.content').on('click', '.btn-danger', onDeleteBook)
+
   $('.content').on('click', '.btn-secondary', onUpdateItem)
+
+  $('.updater').on('submit', onUpdateItem)
 
 }
 

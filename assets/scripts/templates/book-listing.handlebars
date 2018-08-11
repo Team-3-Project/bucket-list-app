@@ -1,5 +1,5 @@
 {{!--
-<div class="row"> --}} {{#each books as |book|}} {{log book}} {{!--
+<div class="row"> --}} {{#each blItems as |blItem|}} {{log blItem}} {{!--
   <div class="card col-4" style="width: 18rem;" id="cardTest" data-id="{{book.id}}">
     <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
     <div class="card-body" data-id="{{book.id}}">
@@ -13,20 +13,20 @@
     </div>
 
   </div> --}} {{!-- accordion card working! --}}
-  <div id="accordion{{book.id}}">
+  <div id="accordion{{blItem._id}}">
 
     <div class="card">
-      <div class="card-header" id="headingOne{{book.id}}">
+      <div class="card-header" id="headingOne{{blItem._id}}">
         <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#firstPage{{book.id}}" aria-expanded="true" aria-controls="collapseOne">
-            Title
+          <button class="btn btn-link" data-toggle="collapse" data-target="#firstPage{{blItem._id}}" aria-expanded="true" aria-controls="collapseOne">
+            Name
           </button>
         </h5>
       </div>
 
-      <div id="firstPage{{book.id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion{{book.id}}">
+      <div id="firstPage{{blItem._id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion{{blItem._id}}">
         <div class="card-body">
-          {{book.title}}
+          {{blItem_.name}}
 
           <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
             alt="First slide">
@@ -35,32 +35,34 @@
     </div>
 
     <div class="card">
-      <div class="card-header" id="headingTwo{{book.id}}">
+      <div class="card-header" id="headingTwo{{blItem._id}}">
         <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo{{book.id}}" aria-expanded="false"
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo{{blItem._id}}" aria-expanded="false"
             aria-controls="collapseTwo">
-            Author </button>
+            Description </button>
         </h5>
       </div>
-      <div id="collapseTwo{{book.id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion{{book.id}}">
+      <div id="collapseTwo{{blItem._id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion{{blItem._id}}">
         <div class="card-body">
-          {{book.author}}
+          {{blItem.description}}
 
-        </div>
+        </div>d
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="headingThree{{book.id}}">
+      <div class="card-header" id="headingThree{{blItem._id}}">
         <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree{{book.id}}" aria-expanded="false"
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree{{blItem._id}}" aria-expanded="false"
             aria-controls="collapseThree">
-            ID </button>
+            Edit Item </button>
         </h5>
       </div>
-      <div id="collapseThree{{book.id}}" class="collapse" aria-labelledby="headingThree" data-parent="#accordion{{book.id}}">
-        <div class="card-body" data-id="{{book.id}}">
+      <div id="collapseThree{{blItem._id}}" class="collapse" aria-labelledby="headingThree" data-parent="#accordion{{blItem._id}}">
+        <div class="card-body" data-id="{{blItem._id}}">
           <button class="btn btn-danger" type="submit">Remove</button>
-          <form>
+
+
+          <form id="form{{blItem._id}}" class="updater">
             <h4 class="display-4">Update Item</h4>
 
             <label>Item Name</label>
@@ -71,12 +73,10 @@
             <input type='text' name='location[name]' class="form-control" placeholder="Location">
             <button type='submit' class='btn btn-secondary'> Submit </button>
           </form>
+
         </div>
       </div>
     </div>
   </div>
   <br>
-  <br>
-
-
-  {{/each}} {{!-- </div> --}}
+  <br> {{/each}} {{!-- </div> --}}
