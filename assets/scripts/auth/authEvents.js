@@ -44,13 +44,19 @@ const onChangePassword = function (event) {
 // sign out for a single user
 // @param event is the click event from the submit button
 // @param this = the form data
-const onSignOut = function (event) {
-  event.preventDefault()
+// const onSignOut = function (event) {
+//   event.preventDefault()
 
-  api.signOut()
-    .then(ui.onSignOutSuccess)
-    .then(setTimeout(() => $('#sign-out-message').text(''), 1000))
-    .catch(ui.onSignOutFailure)
+//   api.signOut()
+//     .then(ui.onSignOutSuccess)
+//     .then(setTimeout(() => $('#sign-out-message').text(''), 1000))
+//     .catch(ui.onSignOutFailure)
+// }
+const onSignOut = function () {
+  event.preventDefault()
+  console.log('Sign out ran!')
+  // .then(ui.signOutSuccess)
+  // .catch(ui.signOutFailure)
 }
 
 module.exports = {
