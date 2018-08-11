@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Example</title>
+  <title>Bucket List</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -11,6 +11,8 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+
 </head>
 
 
@@ -18,15 +20,12 @@
 <body>
 
 
-
-
-
   <!-- landing page -->
   <div id="loginPage" align="center">
     <!-- BEGIN SIGN UP -->
 
-      <!--jumbotron header-->
-  <div class="jumbotron">
+    <!--jumbotron header-->
+    <div class="jumbotron">
       <h1 class="display-4">Bucket List</h1>
       <p class="lead">Where do you want to go?</p>
       <hr class="my-4">
@@ -69,6 +68,8 @@
   <!-- end of landing page -->
 
 
+  <!-- exit/password page -->
+  <div id="outPage"  align="center">
   <!-- BEGIN SIGN OUT -->
   <form id="sign-out">
     <h4 class="display-4">Sign Out</h4>
@@ -86,9 +87,17 @@
   </form>
   <!-- END CHANGE PASSWORD -->
 
+  </div>
+
+  <div id="mainPage"  align="center">
   <form id="search-bucket-list">
     <input type="submit" name="list[id]" class="btn btn-primary">
   </form>
+
+  <!-- end exit page -->
+
+
+
 
   <!-- Start Create Item Form -->
   <form id='create-item'>
@@ -179,4 +188,6 @@
     </form> -->
 
   <!-- end demo -->
+    </div>
+    </body>
 </html>
