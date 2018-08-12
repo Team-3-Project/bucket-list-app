@@ -31,68 +31,121 @@
       <hr class="my-4">
     </div>
 
-    <form id="sign-up">
-      <h4 class="display-4">Make an account</h4>
 
-      <div class="form-group">
-        <label for="exampleInputEmail1">Sign Up</label>
-        <input type="email" name="credentials[email]" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-          placeholder="Enter email">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" name="credentials[password]" value="" class="form-control" id="exampleInputPassword1" placeholder="Password">
-
-        <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password" value="" class="form-control"
-          id="exampleInputPassword2">
-        <input type="submit" name="submit" class="btn btn-primary">
-      </div>
-    </form>
     <!-- END SIGN UP -->
+
+
     <br>
     <!-- BEGIN SIGN IN -->
     <form id="sign-in">
 
       <h4 class="display-4">Sign In</h4>
       <div class="form-group">
-        <label for="logInEmail">Sign In</label>
         <input type="email" name="credentials[email]" value="" class="form-control" id="logInEmail" aria-describedby="emailHelp"
-          placeholder="Enter email">
-        <label for="logInPassword">Password</label>
+          placeholder="email">
         <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="Password">
         <input type="submit" name="submit" class="btn btn-primary">
 
       </div>
     </form>
+    <input type="submit" value="Make an account" class="btn btn-secondary" data-toggle="modal" data-target="#signUpModalCenter">
+
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form id="sign-up">
+              <h4 class="display-4">Make an account</h4>
+
+              <div class="form-group">
+                <input type="email" name="credentials[email]" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="email">
+                <br>
+                <input type="password" name="credentials[password]" value="" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+                <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password" value="" class="form-control"
+                  id="exampleInputPassword2">
+
+                <input type="submit" name="submit" class="btn btn-primary">
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- END SIGN IN -->
 
   </div>
   <!-- end of landing page -->
 
 
-  <!-- exit/password page -->
-  <div id="outPage"  align="center">
-  <!-- BEGIN SIGN OUT -->
-  <form id="sign-out">
-    <h4 class="display-4">Sign Out</h4>
-    <p id="sign-out-message"></p>
-    <input type="submit" class="btn btn-primary">
-  </form>
-  <!-- END SIGN OUT -->
 
-  <!-- BEGIN CHANGE PASSWORD -->
-  <form id="change-password">
-    <h4 class="display-4">Change Password</h4>
-    <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
-    <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
-    <input type="submit" name="submit" class="btn btn-primary">
-  </form>
-  <!-- END CHANGE PASSWORD -->
 
-  </div>
+  <div id="mainPage" align="center">
+    <!-- navbar -->
+    <div class="pos-f-t fixed-top">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h3 class="text-white" data-toggle="modal" data-target=".bd-example-modal-sm">Log Out</h3>
+          <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button> -->
 
-  <div id="mainPage"  align="center">
+          <h3 class="text-white" data-toggle="modal" data-target=".bd-password-modal-sm">Change Password</h3>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+    <!-- navbar end -->
 
-      <!-- carousel for displaying images -->
-  <div id="carouselExampleControls" class="carousel slide w-70 mx-auto" data-ride="carousel">
+    <!-- modal for sign out -->
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          Are you sure you want to sign out?
+          <form id="sign-out">
+            <p id="sign-out-message"></p>
+            <input type="submit" class="btn btn-primary" value="Sign Out">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- end sign out modal -->
+
+    <!-- modal for change pw -->
+    <div class="modal fade bd-password-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          Change your password
+          <form id="change-password">
+            <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
+            <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
+            <input type="submit" name="submit" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- end change pw modal -->
+
+    <!-- carousel for displaying images -->
+    <div id="carouselExampleControls" class="carousel slide w-70 mx-auto" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
@@ -116,72 +169,72 @@
       </a>
     </div>
 
-  <!-- <form id="search-bucket-list">
+    <!-- <form id="search-bucket-list">
     <input type="submit" name="list[id]" class="btn btn-primary">
   </form> -->
 
-  <!-- end exit page -->
+    <!-- end exit page -->
 
 
-  <div id="mainShift">
+    <div id="mainShift">
 
-  <!-- Start Create Item Form -->
-
-
-  <form id='create-item'>
-    <h4 class="display-4">New Item</h4>
-
-    <label>Item Name</label>
-    <input type='text' name='item[item_name]' class="form-control" placeholder="name">
-    <label>Description</label>
-    <input type='text' name='item[description]' class="form-control" id="descriptionField" rows="3" placeholder="Describe your adventure">
-    <label>Location</label>
-    <select name="Locations" id="locationDropdown"></select>
-    <button type='submit' class="btn btn-primary"> Submit </button>
-  </form>
-  <!-- End Create Item Form-->
+      <!-- Start Create Item Form -->
 
 
-<br>
-<br>
+      <form id='create-item'>
+        <h4 class="display-4">New Item</h4>
+
+        <label>Item Name</label>
+        <input type='text' name='item[item_name]' class="form-control" placeholder="name">
+        <label>Description</label>
+        <input type='text' name='item[description]' class="form-control" id="descriptionField" rows="3" placeholder="Describe your adventure">
+        <label>Location</label>
+        <select name="Locations" id="locationDropdown"></select>
+        <button type='submit' class="btn btn-primary"> Submit </button>
+      </form>
+      <!-- End Create Item Form-->
+
+
+      <br>
+      <br>
 
 
 
-<!--
+      <!--
   cards for bucket list items, commented out in case we want to use instead
 
   <div class="card" style="width: 18rem;" id="cardTest"> -->
-    <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-    <!-- <div class="card-body">
+      <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+      <!-- <div class="card-body">
       <h5 class="card-title">Bucket List Item</h5>
       <h6 class="card-title">Location</h6>
       <p class="card-text">This is where the bucket list description goes</p>
       <a href="#" class="btn btn-primary" id="markAsCompleted">Mark As Completed</a> -->
       <!-- <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Edit</a> -->
-    <!-- </div>
+      <!-- </div>
   </div> -->
 
 
 
-  <!-- container for bootstrap positoning  -->
+      <!-- container for bootstrap positoning  -->
 
-  <h4 class="display-4">Bucket List</h4>
+      <h4 class="display-4">Bucket List</h4>
 
-  <button id="getBlItemsButton" class="btn btn-default">Get List!</button>
-  <button id="clearBlItemsButton" class="btn btn-default">Clear List!</button>
+      <button id="getBlItemsButton" class="btn btn-default">Get List!</button>
+      <button id="clearBlItemsButton" class="btn btn-default">Clear List!</button>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
+      <div class="album py-5 bg-light">
+        <div class="container">
 
-      <div id="content container" class="content col-8">
-        <!-- where handlebars appends -->
+          <div id="content container" class="content col-8">
+            <!-- where handlebars appends -->
+          </div>
+
+        </div>
       </div>
 
-    </div>
-  </div>
-
-  <!-- demo  -->
-  <!-- <form id="form" class="updater">
+      <!-- demo  -->
+      <!-- <form id="form" class="updater">
       <h4 class="display-4">Update Item</h4>
 
       <label>Item Name</label>
@@ -193,8 +246,9 @@
       <button type='submit' class='btn btn-secondary'> Submit </button>
     </form> -->
 
-  <!-- end demo -->
+      <!-- end demo -->
     </div>
-    </div>
-    </body>
+  </div>
+</body>
+
 </html>
