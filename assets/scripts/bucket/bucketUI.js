@@ -30,7 +30,7 @@ const getBlItemsSuccess = (data) => {
   $('.content').html(showAccordion)
 }
 
-const clearBooks = () => {
+const clearBlItems = () => {
   $('.content').empty()
 }
 
@@ -46,7 +46,7 @@ module.exports = {
   onDeleteItemSuccess,
   onUpdateItemSuccess,
   getBlItemsSuccess,
-  clearBooks,
+  clearBlItems,
   failure,
   onError
 }

@@ -4,20 +4,9 @@ const getFormFields = require('../../../lib/get-form-fields')
 const bucketApi = require('./bucketApi')
 const bucketUi = require('./bucketUI')
 
-// section for handebars demo
 
-// const onGetBooks = (event) => {
-//  event.preventDefault()
-//  bucketApi.getBooks()
-//    .then(bucketUi.getBooksSuccess)
-//    .catch(bucketUi.failure)
 
-const onGetItems = function (event) {
-  event.preventDefault()
-  bucketApi.getItems()
-  // .then(bucketUi.getItemsSuccess)
-  // .catch(bucketUi.onError)
-}
+
 
 const onShowItem = function (event) {
   event.preventDefault()
@@ -69,25 +58,22 @@ const onCreateItem = function (event) {
 }
 const onGetBlItems = (event) => {
   event.preventDefault()
-  bucketApi.getBooks()
+  bucketApi.getBlitems()
     .then(bucketUi.getBlItemsSuccess)
     .catch(bucketUi.failure)
 }
 
-const onClearBooks = (event) => {
+const onClearBlItems = (event) => {
   event.preventDefault()
-  bucketUi.clearBooks()
+  bucketUi.clearBlItems()
 }
 
-const onDeleteBook = (event) => {
+const onDeleteBlItem = (event) => {
   event.preventDefault()
-  const bookId = $(event.target).closest('div').attr('data-id')
-  bucketApi.deleteBook(bookId)
+  const itemId = $(event.target).closest('div').attr('data-id')
+  bucketApi.deleteBlItem(itemId)
     .then(() => onGetBlItems(event))
     .catch(bucketUi.failure)
-    .then(bucketUi.onCreateItemSuccess)
-    // if API call fails, call an error function in UI
-    .catch(bucketUi.onError)
 }
 
 const onUpdateItem = function (event) {
@@ -111,10 +97,9 @@ const addHandlers = () => {
   // $(' ').on(' ', onUpdateItem)
   $('#create-item').on('submit', onCreateItem)
 
-  $('#getBooksButton').on('click', onGetBlItems)
-  $('#clearBooksButton').on('click', onClearBooks)
-  $('.content').on('click', '.btn-danger', onDeleteBook)
-
+  $('#getBlItemsButton').on('click', onGetBlItems)
+  $('#clearBlItemsButton').on('click', onClearBlItems)
+  $('.content').on('click', '.btn-danger', onDeleteBlItem)
   $('.content').on('click', '.btn-secondary', onUpdateItem)
 
   $('.updater').on('submit', onUpdateItem)
