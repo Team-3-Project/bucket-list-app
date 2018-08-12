@@ -55,9 +55,9 @@ const onCreateItem = function (event) {
     .then(() => console.log(data))
     .then(bucketUi.onCreateItemSuccess)
     // if API call fails, call an error function in UI
-    .catch(() => console.log("error"))
-    .catch(bucketUi.onError)
+    .catch(bucketUi.failure)
 }
+
 const onGetBlItems = (event) => {
   event.preventDefault()
   bucketApi.getBlitems()

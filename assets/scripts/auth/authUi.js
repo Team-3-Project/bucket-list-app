@@ -6,7 +6,7 @@ const onSignUpSuccess = function () {
 }
 
 const onSignUpFailure = function () {
-
+  $('#errorModal').modal('toggle');
 }
 
 
@@ -18,7 +18,8 @@ const onSignInSuccess = function (data) {
 
 }
 const onSignInFailure = function (error) {
-
+  $('#sign-in-message').text('Signed in failed.')
+  $('#errorModal').modal('toggle')
 }
 
 const onChangePasswordSuccess = function () {
@@ -26,7 +27,9 @@ const onChangePasswordSuccess = function () {
 }
 
 const onChangePasswordFailure = function () {
-
+  $('#change-password-message').text('Password change failed.')
+  $('#change-password-message').css('background-color', 'red')
+  $('#errorModal').modal('toggle');
 }
 
 const onSignOutSuccess = function () {
@@ -36,7 +39,9 @@ const onSignOutSuccess = function () {
 }
 
 const onSignOutFailure = function () {
-
+  $('#sign-out-message').text('Signed out failed.')
+  $('#sign-out-message').css('background-color', 'red')
+  $('#errorModal').modal('toggle');
 }
 
 module.exports = {

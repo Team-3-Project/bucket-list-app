@@ -1,3 +1,6 @@
+const getItemsSuccess = function () {
+
+}
 
 const showItemSuccess = function () {
 
@@ -18,7 +21,8 @@ const onUpdateItemSuccess = function () {
 }
 
 const onError = function () {
-
+  $('#errorModal').modal('toggle')
+  console.log('wrong')
 }
 
 // handlebars demo
@@ -35,6 +39,8 @@ const clearBlItems = () => {
 
 const failure = (error) => {
   console.error(error)
+  $('#errorModal').modal('toggle');
+
 }
 
 
