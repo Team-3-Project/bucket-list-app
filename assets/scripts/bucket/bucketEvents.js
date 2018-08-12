@@ -8,15 +8,15 @@ const bucketUi = require('./bucketUI')
 
 
 
-const onShowItem = function (event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  // could put some input validation here if we want
-  // message the user if validation fails
-  bucketApi.showItem(data)
-  // .then(bucketUi.showItemSuccess)
-  // .catch(bucketUi.onError)
-}
+// const onShowItem = function (event) {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   // could put some input validation here if we want
+//   // message the user if validation fails
+//   bucketApi.showItem(data)
+//   // .then(bucketUi.showItemSuccess)
+//   // .catch(bucketUi.onError)
+// }
 
 
 const onDeleteItem = function (event) {

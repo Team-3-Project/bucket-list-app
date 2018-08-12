@@ -3,34 +3,25 @@
 const config = require('../config')
 const store = require('../store')
 
-const getItems = function () {
-  return $.ajax({
-    url: config.apiUrl + '/bl-items',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
-}
-const showItem = (itemId) => {
-  return $.ajax({
-    url: config.apiUrl + '/bl-items/' + itemId,
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
-}
+// const showItem = (itemId) => {
+//   return $.ajax({
+//     url: config.apiUrl + '/bl-items/' + itemId,
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
 
-const deleteItem = (itemId) => {
-  return $.ajax({
-    url: config.apiUrl + '/bl-items/' + itemId,
-    method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
-}
+// const deleteItem = (itemId) => {
+//   return $.ajax({
+//     url: config.apiUrl + '/bl-items/' + itemId,
+//     method: 'DELETE',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
 
 const updateItem = function (data) {
   return $.ajax({
@@ -64,7 +55,11 @@ const createItem = function (data) {
 // handlebars demo
 const getBlitems = function () {
   return $.ajax({
-    url: config.apiUrl + '/bl-items'
+    url: config.apiUrl + '/bl-items',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
@@ -81,11 +76,8 @@ const deleteBlItem = (itemId) => {
 // handebars demo end
 
 module.exports = {
-  getItems,
-  deleteItem,
   createItem,
   updateItem,
   deleteBlItem,
-  getBlitems,
-  showItem
+  getBlitems
 }
