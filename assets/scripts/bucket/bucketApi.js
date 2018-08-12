@@ -76,11 +76,8 @@ const deleteBlItem = (itemId) => {
 // handebars demo end
 
 module.exports = {
-  getItems,
-  deleteItem,
   createItem,
   updateItem,
   deleteBlItem,
-  getBlitems,
-  showItem
+  getBlitems
 }

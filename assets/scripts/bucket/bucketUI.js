@@ -40,7 +40,6 @@ const failure = (error) => {
 
 module.exports = {
   onCreateItemSuccess,
-  getItemsSuccess,
   showItemSuccess,
   onDeleteItemSuccess,
   onUpdateItemSuccess,
