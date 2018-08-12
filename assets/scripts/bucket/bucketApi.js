@@ -62,16 +62,19 @@ const createItem = function (data) {
 }
 
 // handlebars demo
-const getBooks = function () {
+const getBlitems = function () {
   return $.ajax({
     url: config.apiUrl + '/bl-items'
   })
 }
 
-const deleteBook = (bookId) => {
+const deleteBlItem = (itemId) => {
   return $.ajax({
-    url: config.apiUrl + '/books/' + bookId,
-    method: 'DELETE'
+    url: config.apiUrl + '/bl-items/' + itemId,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
@@ -82,7 +85,7 @@ module.exports = {
   deleteItem,
   createItem,
   updateItem,
-  deleteBook,
-  getBooks,
+  deleteBlItem,
+  getBlitems,
   showItem
 }

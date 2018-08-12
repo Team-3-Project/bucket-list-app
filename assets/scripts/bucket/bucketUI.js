@@ -7,6 +7,8 @@ const showItemSuccess = function () {
 }
 
 const onCreateItemSuccess = function () {
+  console.log('create suceess')
+  $('#getBlItemsButton').click()
 
 }
 
@@ -30,7 +32,7 @@ const getBlItemsSuccess = (data) => {
   $('.content').html(showAccordion)
 }
 
-const clearBooks = () => {
+const clearBlItems = () => {
   $('.content').empty()
 }
 
@@ -46,7 +48,7 @@ module.exports = {
   onDeleteItemSuccess,
   onUpdateItemSuccess,
   getBlItemsSuccess,
-  clearBooks,
+  clearBlItems,
   failure,
   onError
 }
