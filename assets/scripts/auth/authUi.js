@@ -19,16 +19,18 @@ const onSignUpFailure = function () {
 }
 
 
-const onSignInSuccess = function(data) {
-    store.user = data.user
-    $('#loginPage').css('display', 'none')
-    $('#mainPage').css('display', 'block')
-    $('#sign-in-message').text('Signed in successfully.')
-    $('#sign-in-message').css('background-color', 'green')
+const onSignInSuccess = function (data) {
+  store.user = data.user
+  $('#loginPage').css('display', 'none')
+  $('#mainPage').css('display', 'block')
+  $('#sign-in-message').text('Signed in successfully.')
+  $('#sign-in-message').css('background-color', 'green')
+  $('#getBlItemsButton').click()
+
 }
-const onSignInFailure = function(error) {
-    $('#sign-in-message').text('Signed in failed.')
-    $('#sign-in-message').css('background-color', 'red')
+const onSignInFailure = function (error) {
+  $('#sign-in-message').text('Signed in failed.')
+  $('#sign-in-message').css('background-color', 'red')
 }
 
 const onChangePasswordSuccess = function () {
@@ -42,8 +44,9 @@ const onChangePasswordFailure = function () {
 }
 
 const onSignOutSuccess = function () {
-  $('#sign-out-message').text('Signed out successfully.')
-  $('#sign-out-message').css('background-color', 'green')
+
+  location.reload();
+
 }
 
 const onSignOutFailure = function () {

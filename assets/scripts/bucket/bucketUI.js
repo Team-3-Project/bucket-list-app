@@ -7,6 +7,8 @@ const showItemSuccess = function () {
 }
 
 const onCreateItemSuccess = function () {
+  console.log('create suceess')
+  $('#getBlItemsButton').click()
 
 }
 
