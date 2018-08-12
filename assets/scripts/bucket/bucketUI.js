@@ -1,6 +1,3 @@
-const getItemsSuccess = function () {
-
-}
 
 const showItemSuccess = function () {
 
