@@ -24,13 +24,21 @@ const store = require('../store')
 // }
 
 const updateItem = function (data) {
+  debugger
   return $.ajax({
     url: config.apiUrl + '/bl-items/' + data.item.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
+    data: {
+      item: {
+        name: data.item.item_name,
+        description: data.item.description,
+        location: data.location.name,
+        owner: store.user._id
+      }
+    }
   })
 }
 

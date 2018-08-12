@@ -80,11 +80,11 @@ const onDeleteBlItem = (event) => {
 
 const onUpdateItem = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
+  const data = getFormFields(event.target.form)
   console.log('logging update')
   console.log(data)
   console.log(this)
-  // bucketApi.updateItem(data)
+  bucketApi.updateItem(data)
   // .then(bucketUi.onUpdateItemSuccess)
   // .catch(bucketUi.onError)
 
