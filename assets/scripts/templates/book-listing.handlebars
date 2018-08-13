@@ -19,14 +19,14 @@
       <div class="card-header" id="headingOne{{blItem._id}}">
         <h5 class="mb-0">
           <button class="btn btn-link" data-toggle="collapse" data-target="#firstPage{{blItem._id}}" aria-expanded="true" aria-controls="collapseOne">
-            Name
+            {{blItem.name}}
           </button>
         </h5>
       </div>
 
       <div id="firstPage{{blItem._id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion{{blItem._id}}">
         <div class="card-body">
-          {{blItem_.name}}
+          {{!-- {{blItem.name}}  --}}
 
           <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
             alt="First slide">
@@ -62,15 +62,15 @@
           <button class="btn btn-danger" type="submit">Remove</button>
 
 
-          <form id="form{{blItem._id}}" class="updater">
+          <form id="{{blItem._id}}" class="updater">
             <h4 class="display-4">Update Item</h4>
-
+            {{!-- <input type="text" name='item[_id]' value="{{blItem._id}}" placeholder=""> --}}
             <label>Item Name</label>
-            <input type='text' name='[item_name]' class="form-control" placeholder="Item Name">
+            <input type='text' name='item[item_name]' class="form-control" value="{{blItem.name}}">
             <label>Description</label>
-            <input type='text' name='item[description]' class="form-control" placeholder="Description">
+            <input type='text' name='item[description]' class="form-control" value="{{blItem.description}}">
             <label>Location</label>
-            <input type='text' name='location[name]' class="form-control" placeholder="Location">
+            <input type='text' name='location[name]' class="form-control" value="{{blItem.location}}">
             <button type='submit' class='btn btn-secondary'> Submit </button>
           </form>
 
