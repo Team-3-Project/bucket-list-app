@@ -4,7 +4,10 @@ let apiUrl
 const apiUrls = {
   production: '<replace-with-heroku-url>',
   development: 'http://localhost:4741'
+  // commented out for handlebars practice
+  // development: 'https://ga-library-api.herokuapp.com'
 }
+
 
 if (window.location.hostname === 'localhost') {
   apiUrl = apiUrls.development

@@ -6,6 +6,19 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 require('./auth/auth')
+//handlebars demo
+// const bookEvents = require('./bucket/bucketEvents.js')
+const bucketEvents = require('./bucket/bucketEvents')
+const locationEvents = require('./locations/locationEvents')
+
 $(() => {
-  // your JS code goes here
+  locationEvents.getLocations()
+  bucketEvents.addHandlers()
+  // bookEvents.addHandlers()
+  // click handler for testing bootstrap manipulation, can move later
+  $("#markAsCompleted").click(function () {
+    event.preventDefault()
+    $('#cardTest').addClass("bg-success text-white")
+  })
 })
+
