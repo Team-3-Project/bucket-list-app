@@ -23,6 +23,7 @@ const onCreateItem = function (event) {
     .then(() => console.log(data))
     .then(bucketUi.onCreateItemSuccess)
     .catch(bucketUi.failure)
+  // $('#create-item').trigger('reset')
 }
 
 const onGetBlItems = (event) => {
