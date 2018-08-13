@@ -64,9 +64,9 @@ const onUpdateItem = function (event) {
   console.log('logging update')
   console.log(data)
   console.log(this)
-  // bucketApi.updateItem(data)
-  // .then(bucketUi.onUpdateItemSuccess)
-  // .catch(bucketUi.onError)
+  bucketApi.updateItem(data)
+  .then(bucketUi.onUpdateItemSuccess)
+  .catch(bucketUi.onError)
 
 }
 const addHandlers = () => {

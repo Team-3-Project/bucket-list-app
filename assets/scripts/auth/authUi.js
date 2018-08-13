@@ -9,8 +9,7 @@ const resetForms = function () {
 }
 
 const onSignUpSuccess = function () {
-  $('#sign-up-message').text('Signed up successfully.')
-  $('#sign-up-message').css('background-color', 'green')
+  $('#signUpModalCenter').modal('toggle')
 }
 
 const onSignUpFailure = function () {
@@ -33,8 +32,7 @@ const onSignInFailure = function (error) {
 }
 
 const onChangePasswordSuccess = function () {
-  $('#change-password-message').text('Changed password successfully.')
-  $('#change-password-message').css('background-color', 'green')
+  $('#passwordField').text('Changed password successfully')
 }
 
 const onChangePasswordFailure = function () {
