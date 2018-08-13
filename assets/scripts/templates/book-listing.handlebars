@@ -19,7 +19,7 @@
       <div class="card-header" id="headingOne{{blItem._id}}">
         <h5 class="mb-0">
           <button class="btn btn-link" data-toggle="collapse" data-target="#firstPage{{blItem._id}}" aria-expanded="true" aria-controls="collapseOne">
-            {{blItem.name}}
+            <h4>{{blItem.name}}</h4>
           </button>
         </h5>
       </div>
@@ -28,7 +28,7 @@
         <div class="card-body">
           {{!-- {{blItem.name}}  --}}
 
-          <img class="d-block w-100" src="http://www.ewallpapers.eu/sites/default/files/styles/1920x1080/public/bruges-68885-4568219.jpg?itok=AL6bW3JR"
+          <img class="d-block w-100" src="https://whiteoakrichmond.com/wp-content/uploads/2013/09/white-oak-landscaping_placeholder_700x300_3.png"
             alt="First slide">
         </div>
       </div>
@@ -39,7 +39,7 @@
         <h5 class="mb-0">
           <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo{{blItem._id}}" aria-expanded="false"
             aria-controls="collapseTwo">
-            Description </button>
+            <h4>Description</h4> </button>
         </h5>
       </div>
       <div id="collapseTwo{{blItem._id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion{{blItem._id}}">
@@ -54,12 +54,12 @@
         <h5 class="mb-0">
           <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree{{blItem._id}}" aria-expanded="false"
             aria-controls="collapseThree">
-            Edit Item </button>
+            <h4>Edit Item</h4> </button>
         </h5>
       </div>
       <div id="collapseThree{{blItem._id}}" class="collapse" aria-labelledby="headingThree" data-parent="#accordion{{blItem._id}}">
         <div class="card-body" data-id="{{blItem._id}}">
-          <button class="btn btn-danger" type="submit">Remove</button>
+
 
 
           <form id="{{blItem._id}}" class="updater">
@@ -71,9 +71,11 @@
             <input type='text' name='item[description]' class="form-control" value="{{blItem.description}}">
             <label>Location</label>
             <input type='text' name='location[name]' class="form-control" value="{{blItem.location}}">
+            <br>
             <button type='submit' class='btn btn-secondary'> Submit </button>
           </form>
-
+            <br>
+            <button class="btn btn-danger" type="submit">Remove</button>
         </div>
       </div>
     </div>
