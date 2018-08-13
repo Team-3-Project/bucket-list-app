@@ -4,16 +4,6 @@ const getFormFields = require('../../../lib/get-form-fields')
 const bucketApi = require('./bucketApi')
 const bucketUi = require('./bucketUI')
 
-// const onShowItem = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   // could put some input validation here if we want
-//   // message the user if validation fails
-//   bucketApi.showItem(data)
-//   // .then(bucketUi.showItemSuccess)
-//   // .catch(bucketUi.onError)
-// }
-
 const onCreateItem = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -48,17 +38,16 @@ const onDeleteBlItem = (event) => {
 
 const onUpdateItem = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  // could put some input validation here if we want
-  // message the user if validation fails
-  console.log('logging update')
-  console.log(data)
-  console.log(this)
-  // bucketApi.updateItem(data)
+  
+  const data = getFormFields(event.target.form)
+  const itemId = $(event.target).closest('div').attr('data-id')
+  bucketApi.updateItem(data, itemId)
+  .then(() => onGetBlItems(event))
+
   // .then(bucketUi.onUpdateItemSuccess)
   // .catch(bucketUi.onError)
-
 }
+
 const addHandlers = () => {
 
   // If we want to use this JQuery, replace the spaces between the sets of single quotes:
