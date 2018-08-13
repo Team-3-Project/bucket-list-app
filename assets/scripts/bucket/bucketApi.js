@@ -19,18 +19,26 @@ const store = require('../store')
 //     method: 'DELETE',
 //     headers: {
 //       Authorization: 'Token token=' + store.user.token
-//     }
+//     }, 
 //   })
 // }
 
-const updateItem = function (data) {
+const updateItem = function (data, itemID) {
+  debugger
   return $.ajax({
-    url: config.apiUrl + '/bl-items/' + data.item.id,
+    url: config.apiUrl + '/bl-items/' + itemID,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
+    data: {
+      item: {
+        name: data.item.item_name,
+        description: data.item.description,
+        location: data.location.name,
+        owner: store.user._id
+      }
+    }
   })
 }
 

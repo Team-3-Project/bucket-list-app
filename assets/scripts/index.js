@@ -7,14 +7,14 @@
 // require('./example')
 require('./auth/auth')
 //handlebars demo
-const bookEvents = require('./bucket/bucketEvents.js')
+// const bookEvents = require('./bucket/bucketEvents.js')
 const bucketEvents = require('./bucket/bucketEvents')
 const locationEvents = require('./locations/locationEvents')
 
 $(() => {
   locationEvents.getLocations()
   bucketEvents.addHandlers()
-  bookEvents.addHandlers()
+  // bookEvents.addHandlers()
   // click handler for testing bootstrap manipulation, can move later
   $("#markAsCompleted").click(function () {
     event.preventDefault()
