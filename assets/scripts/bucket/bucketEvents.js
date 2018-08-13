@@ -4,21 +4,6 @@ const getFormFields = require('../../../lib/get-form-fields')
 const bucketApi = require('./bucketApi')
 const bucketUi = require('./bucketUI')
 
-
-
-
-
-// const onShowItem = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   // could put some input validation here if we want
-//   // message the user if validation fails
-//   bucketApi.showItem(data)
-//   // .then(bucketUi.showItemSuccess)
-//   // .catch(bucketUi.onError)
-// }
-
-
 const onDeleteItem = function (event) {
   event.preventDefault()
   const itemId = $(event.target).closest('ul').attr('data-id')
@@ -26,18 +11,6 @@ const onDeleteItem = function (event) {
   //   .then(bucketUi.onDeleteItemSuccess)
   //   .catch(bucketUi.onError)
 }
-
-
-// const onUpdateItem = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   // could put some input validation here if we want
-//    // message the user if validation fails
-//    bucketApi.updateItem(data)
-//        // .then(bucketUi.onUpdateItemSuccess)
-//        // .catch(bucketUi.onError)
-//    }
-
 
 const onCreateItem = function (event) {
   event.preventDefault()
@@ -82,9 +55,6 @@ const onUpdateItem = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target.form)
   const itemId = $(event.target).closest('div').attr('data-id')
-  // console.log('logging update')
-  // console.log(data)
-  // console.log(this)
   bucketApi.updateItem(data, itemId)
   .then(() => onGetBlItems(event))
   // .then(bucketUi.onUpdateItemSuccess)
