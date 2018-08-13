@@ -3,26 +3,6 @@
 const config = require('../config')
 const store = require('../store')
 
-// const showItem = (itemId) => {
-//   return $.ajax({
-//     url: config.apiUrl + '/bl-items/' + itemId,
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-
-// const deleteItem = (itemId) => {
-//   return $.ajax({
-//     url: config.apiUrl + '/bl-items/' + itemId,
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }, 
-//   })
-// }
-
 const updateItem = function (data, itemID) {
   debugger
   return $.ajax({
