@@ -1,9 +1,6 @@
 // 'use strict'
 const store = require('../store')
 
-const onSignUpSuccess = function () {
-  $('#sign-up').trigger('reset')
-}
 const resetForms = function () {
   document.getElementById('sign-up').reset()
   document.getElementById('sign-in').reset()
@@ -11,6 +8,7 @@ const resetForms = function () {
 }
 
 const onSignUpSuccess = function () {
+  $('#sign-up').trigger('reset')
   $('#signUpModalCenter').modal('toggle')
 }
 

@@ -10,8 +10,9 @@ const onCreateItem = function (event) {
   // could put some input validation here if we want
   // message the user if validation fails
   bucketApi.createItem(data)
-    .then(() => console.log(data))
+    // .then(() => console.log(data))
     .then(bucketUi.onCreateItemSuccess)
+    .then(() => $('#create-item').trigger('reset'))
     .catch(bucketUi.failure)
   // $('#create-item').trigger('reset')
 }
@@ -45,7 +46,7 @@ const onUpdateItem = function (event) {
   .then(() => onGetBlItems(event))
 
   // .then(bucketUi.onUpdateItemSuccess)
-  // .catch(bucketUi.onError)
+  .catch(bucketUi.onError)
 }
 
 const addHandlers = () => {
