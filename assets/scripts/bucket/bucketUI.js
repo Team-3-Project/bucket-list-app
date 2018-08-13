@@ -1,7 +1,4 @@
-
-
 const onCreateItemSuccess = function () {
-  console.log('create suceess')
   $('#getBlItemsButton').click()
 
 }
@@ -11,15 +8,20 @@ const onUpdateItemSuccess = function () {
 }
 
 const onError = function () {
-  $('#errorModal').modal('toggle')
-  console.log('wrong')
+  if ($('#notOwner')) {
+    $('#notOwner').modal('toggle')
+  } else {
+    $('#errorModal').modal('toggle')
+  }
 }
 
 // handlebars demo
 const accordionTemplate = require('../templates/book-listing.handlebars')
 
 const getBlItemsSuccess = (data) => {
-  const showAccordion = accordionTemplate({ blItems: data.blItems })
+  const showAccordion = accordionTemplate({
+    blItems: data.blItems
+  })
   $('.content').html(showAccordion)
 }
 
@@ -28,9 +30,7 @@ const clearBlItems = () => {
 }
 
 const failure = (error) => {
-  console.error(error)
   $('#errorModal').modal('toggle');
-
 }
 
 
