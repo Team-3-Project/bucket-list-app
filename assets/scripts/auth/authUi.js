@@ -8,13 +8,13 @@ const resetForms = function () {
 }
 
 const onSignUpSuccess = function () {
-  $('#sign-up-message').text('Signed up successfully.')
-  $('#sign-up-message').css('background-color', 'green')
+  $('#sign-up').trigger('reset')
+  $('#signUpModalCenter').modal('toggle')
 }
 
 const onSignUpFailure = function () {
-  $('#sign-up-message').text('Signed up failed.')
-  $('#sign-up-message').css('background-color', 'red')
+  $('#sign-up').trigger('reset')
+  $('#errorModal').modal('toggle')
 }
 
 const onSignInSuccess = function (data) {
@@ -24,26 +24,38 @@ const onSignInSuccess = function (data) {
   $('#sign-in-message').text('Signed in successfully.')
   $('#sign-in-message').css('background-color', 'green')
   $('#getBlItemsButton').click()
+}
+
+const onSignInFailure = function (error) {
+  $('#sign-in').trigger('reset')
+  $('#sign-in-message').text('Signed in failed.')
+  $('#errorModal').modal('toggle');
+
+}
 
 const onChangePasswordSuccess = function () {
-  $('#change-password-message').text('Changed password successfully.')
-  $('#change-password-message').css('background-color', 'green')
+  $('#change-password').trigger('reset')
+  $('#passwordField').text('Changed password successfully')
 }
 
 const onChangePasswordFailure = function () {
+  $('#change-password').trigger('reset')
   $('#change-password-message').text('Password change failed.')
   $('#change-password-message').css('background-color', 'red')
+  $('#errorModal').modal('toggle')
 }
 
 const onSignOutSuccess = function () {
 
-  location.reload();
+  location.reload()
 
 }
 
 const onSignOutFailure = function () {
   $('#sign-out-message').text('Signed out failed.')
   $('#sign-out-message').css('background-color', 'red')
+
+  $('#errorModal').modal('toggle')
 }
 
 module.exports = {
