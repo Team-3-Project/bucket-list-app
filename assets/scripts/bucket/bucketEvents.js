@@ -53,14 +53,15 @@ const onDeleteBlItem = (event) => {
 
 const onUpdateItem = function (event) {
   event.preventDefault()
+
   const data = getFormFields(event.target.form)
   const itemId = $(event.target).closest('div').attr('data-id')
   bucketApi.updateItem(data, itemId)
   .then(() => onGetBlItems(event))
   // .then(bucketUi.onUpdateItemSuccess)
   // .catch(bucketUi.onError)
-
 }
+
 const addHandlers = () => {
   // for each of the following replace the spaces between the sets of single quotes:
   // add the HTML id, class, or element we want to attach an event to, and the event/s

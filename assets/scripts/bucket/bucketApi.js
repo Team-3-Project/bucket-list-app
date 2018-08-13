@@ -4,7 +4,6 @@ const config = require('../config')
 const store = require('../store')
 
 const updateItem = function (data, itemID) {
-  debugger
   return $.ajax({
     url: config.apiUrl + '/bl-items/' + itemID,
     method: 'PATCH',

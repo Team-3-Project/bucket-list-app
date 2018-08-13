@@ -1,18 +1,8 @@
-const getItemsSuccess = function () {
 
-}
-
-const showItemSuccess = function () {
-
-}
 
 const onCreateItemSuccess = function () {
   console.log('create suceess')
   $('#getBlItemsButton').click()
-
-}
-
-const onDeleteItemSuccess = function () {
 
 }
 
@@ -46,8 +36,6 @@ const failure = (error) => {
 
 module.exports = {
   onCreateItemSuccess,
-  showItemSuccess,
-  onDeleteItemSuccess,
   onUpdateItemSuccess,
   getBlItemsSuccess,
   clearBlItems,
