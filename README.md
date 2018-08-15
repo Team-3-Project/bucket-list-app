@@ -3,7 +3,7 @@ Overview
 This is a group project assignment that was given by General Assembly.Our assignment included creating a website that pertains to bucketlists. We initally thought it would be best to mostly base it on one to many relationships. We needed to create a Single Page Application for the web that would allow a user to to interact with the website and the back end was used to authenticate the functions off CRUD.
 
 # Link for wiki that includes ERD, Wireframe and workflow.
-https://github.com/Team-3-Project/bucket-list-api/wiki
+https://github.com/Team-3-Project/bucket-list-app/wiki
 
 # Link to Front End
 * Deployed App : https://team-3-project.github.io/bucket-list-app/
