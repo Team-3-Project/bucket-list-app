@@ -4,17 +4,26 @@ This is a group project assignment that was given by General Assembly.Our assign
 
 # Link for wiki that includes ERD, Wireframe and workflow.
 https://github.com/Team-3-Project/bucket-list-api/wiki
+
 # Link to Front End
-https://team-3-project.github.io/bucket-list-app/
-https://github.com/Team-3-Project/bucket-list-app
+* Deployed App : https://team-3-project.github.io/bucket-list-app/
+* Repository : https://github.com/Team-3-Project/bucket-list-app
 # Links to Back End
-https://boiling-harbor-16682.herokuapp.com/
-https://github.com/Team-3-Project/bucket-list-api
+* Deployed Back End : https://boiling-harbor-16682.herokuapp.com/
+*  Respository : https://github.com/Team-3-Project/bucket-list-api
+
 # My user stories for this project were:
 
-As a user I can sign up, sign in,I can change password and sign out of the app.
-Once signed in, I can create a bucket list, search for bucket list items, delete a bucket list item and update a bucketlist item.
-I can see if I was successful or not.
+As a user I can 
+* sign up 
+* sign in
+* change password and sign out of the app.
+Once signed in, I can: 
+* create a bucket list item 
+* search for bucket list items  
+* delete a bucket list item 
+* update a bucketlist item.
+There are visual cues and/or messages if a task was successful or not.
 
 # Project Requirements are:
 Our app has been deployed on Github pages.
@@ -40,7 +49,6 @@ Styling min
 Wireframe
 
 # Stretch Goals
-* To add locations to our project.
 * To add social features to site that allows you to follow other users
 * To allow users to make certain items public but to default to private.
 
@@ -60,16 +68,16 @@ We all have commits in both repos- We also each contributed to the blocks of cod
 
 # Challenges
 
-We had a few challenges with merge conflicts.
-A few minor oops on pushing to the master branch, but was resolved.
-We all had our own visions on how dynamic the project was going to be.
-We had to regroup and make sure we were on target to make MVP.
-We had to prioritize.
+* We had a few challenges with merge conflicts.
+* A few minor oops on pushing to the master branch, but was resolved.
+* We all had our own visions on how dynamic the project was going to be.
+* We had to regroup and make sure we were on target to make MVP.
+* We had to prioritize.
 
 #Things we did right
 
-We had a stand up at the beginning of each day.
-We communicated throughout the day.
-We sat in the same space together and worked indepedantly but as a group also.
-We pushed after each feature or piece of code we were responsible for.
-We mostly pulled at the same time from our develpment branch so we could make sure to stay on the same page.
+* We had a stand up at the beginning of each day.
+* We communicated throughout the day.
+* We sat in the same space together and worked indepedantly but as a group also.
+* We pushed after each feature or piece of code we were responsible for.
+* We mostly pulled at the same time from our develpment branch so we could make sure to stay on the same page.
